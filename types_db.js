@@ -134,7 +134,7 @@ var types_db = {
         14: ["ESTJ", "8w9", "so/sp", "", "SEE", "", "", ""], //Bodie Broadus
         15: ["ENTJ", "3w2", "sp/sx", "358", "LIE", "RCOEI", "LVFE", "MC"], //Stringer Bell
         16: ["ENTJ", "3w2", "", "316", "EIE", "", "", ""], //Tommy Carcetti
-        17: ["ESTP", "6w7", "", "684", "SEE", "", "", ""], //Avon Barksdale
+        17: ["ESTP", "6w7", "", "682", "SEE", "", "", ""], //Avon Barksdale
         18: ["ISTP", "6w5", "", "", "SLI", "", "", ""], //Chris Partlow
         19: ["ENTJ", "3w2", "", "", "", "", "", ""], //Norman Wilson
         20: ["ISTP", "6w5", "", "684", "SLE", "", "", ""], //Michael Lee
@@ -223,5 +223,66 @@ var types_db = {
         13: ["ISFJ", "2w1", "sx/sp", "629", "ESI", "", "", "P"], //Waylon Smithers
         14: ["INFP", "4w5", "sp/sx", "497", "SEI", "", "", "PS"], //Barney Gumble
         15: ["ISTJ", "1w2", "sp/sx", "163", "LSI", "", "", "P"] //Seymour Skinner
+    },
+    "T7S": { //That 70's Show
+        1: ["INTP", "6w7", "sp/so", "693", "EII", "RLOAI", "LEFV", "P"], //Eric Forman
+        2: ["ESTJ", "3w2", "so/sx", "317", "ESE", "SLOEN", "FVEL", "CS"], //Jackie Burkhart
+        3: ["ESFP", "7w6", "so/sx", "729", "SEE", "", "EFVL", "S"], //Michael Kelso
+        4: ["ISTP", "9w8", "sp/sx", "974", "SLI", "", "VLEF", "P"], //Steven Hyde
+        5: ["ESTP", "9w8", "so/sx", "962", "SLE", "", "", "PC"], //Donna Pinciotti
+        6: ["ENFP", "7w6", "sx/so", "738", "IEE", "", "", "S"], //Fez
+        7: ["ESFJ", "2w1", "so/sx", "216", "SEI", "", "", "SC"], //Kitty Foreman
+        8: ["ESTJ", "8w9", "sp/sx", "863", "LSI", "", "", "C"], //Red Foreman
+        9: ["ESFP", "7w6", "so/sx", "794", "", "", "", "S"], //Midge Pinciotti
+        10: ["ENFP", "6w7", "so/sp", "792", "SEE", "", "", "S"] //Bob Pinciotti
+    },
+    "DA": { //Downton Abbey
+        1: ["ISFJ", "2w1", "so/sx", "215", "", "", "", "S"], //Robert Crawley, Lord Grantham
+        2: ["INFP", "9w8", "so/sx", "947", "EII", "", "", "SM"], //Lady Sybil Crawley
+        3: ["ISFP", "4w3", "sp/sx", "469", "ESI", "", "", "MS"], //Lady Edith Crawley
+        4: ["ISTJ", "1w2", "sp/so", "152", "LSI", "", "", "C"], //Charlie Carson
+        5: ["INFJ", "5w6", "sp/sx", "592", "", "", "", "M"], //John Bates
+        6: ["ENTJ", "3w4", "so/sp", "361", "LIE", "RCUEN", "VLEF", "C"], //Lady Mary Crawley
+        7: ["INTJ", "4w5", "sp/so", "", "", "", "", ""], //Sarah O'Brien
+        8: ["ESFJ", "9w1", "so/sx", "296", "", "", "", "S"], //Anna Bates
+        9: ["ISTJ", "6w5", "so/sp", "631", "", "", "", "P"], //Elsie Hughes
+        10: ["ESFJ", "2w3", "sp/so", "269", "", "", "", "P"], //William Mason
+        11: ["INTJ", "3w4", "sp/sx", "368", "SLI", "", "", "MC"], //Thomas Barrow
+        12: ["ESFJ", "9w1", "sx/sp", "286", "", "", "", "S"], //Cora Crawley, Lady Grantham
+        13: ["ISFP", "6w7", "so/sx", "", "", "", "", "S"], //Diasy Mason
+        14: ["ESFJ", "6w5", "so/sx", "628", "", "", "", "C"], //Beryl Patmore
+        15: ["ESTJ", "6w5", "so/sp", "", "", "", "", "CP"] //Violet Crawley / Dowager Countess / Granny
+    },
+    "SW": { //Star Wars
+        1: ["INFP", "9w1", "sp/so", "926", "IEE", "RCUAI", "EVLF", "PS"], //Luke Skywalker
+        2: ["ENTJ", "1w2", "so/sp", "126", "LSE", "SCOAN", "VLEF", "C"], //Leia Organa
+        3: ["ESTP", "7w8", "sp/sx", "783", "SLE", "SCUEN", "FVLE", "CS"], //Han Solo
+        4: ["ISTJ", "8w9", "sp/sx", "864", "LSI", "RLOEI", "VLEF", "M"], //Darth Vader
+        5: ["INFJ", "6w5", "so/sp", "612", "EII", "RCOAI", "LEVF", "P"], //Obi-Wan Kenobi
+        6: ["ISFJ", "6w5", "sp/so", "612", "ESI", "RLOAN", "", "M"] //C-3PO
+    },
+    "GA": { //Grey's Anatomy
+        1: ["ISFP", "4w3", "sx/so", "469", "IEI", "", "ELVF", "M"], //Meredith Grey
+        2: ["ISTP", "3w4", "sp/sx", "358", "LSI", "", "", "MC"], //Cristina Yang
+        3: ["ESFJ", "2w1", "sx/so", "216", "ESE", "", "", "S"], //Isobel "Izzie" Stevens
+        4: ["ISTP", "8w9", "sp/sx", "836", "SLE", "", "", "CP"], //Alex Karev
+        5: ["ISFJ", "9w1", "sx/so", "962", "SEI", "", "", "P"], //George O'Malley
+        6: ["ESTJ", "1w2", "sx/sp", "136", "LSE", "", "", "C"], //Miranda Bailey
+        7: ["ENFJ", "2w3", "so/sp", "216", "EII", "", "", "PS"], //Richard Webber
+        8: ["ISTJ", "3w4", "sx/sp", "315", "LSE", "", "", "M"], //Preston Burke
+        9: ["ENFJ", "3w2", "sp/sx", "386", "EIE", "", "", "PS"], //Derek Shepherd
+        10: ["ENFJ", "3w2", "so/sx", "368", "LIE", "", "", "MC"] //Addison Montgomery
+    },
+    "BB": { //Breaking Bad
+        1: ["INTJ", "5w6", "sp/so", "583", "ILI", "RLOEI", "VFLE", "MC"], //Walter White
+        2: ["ESFJ", "1w2", "sp/so", "126", "ESI", "SLOAN", "VFEL", "C"], //Skyler White
+        3: ["ESFP", "6w7", "so/sx", "694", "SEE", "SLUAN", "FEVL", "SM"], //Jesse Pinkman
+        4: ["ESTP", "8w7", "so/sx", "873", "SLE", "SCOEN", "FVLE", "SC"], //Hank Schrader
+        5: ["ESFP", "2w3", "sx/so", "268", "EIE", "SLUAN", "", "SC"], //Marie Schrader
+        6: ["ISFP", "9w1", "sx/so", "946", "EII", "RLUAN", "", "MP"], //Walter White Jr.
+        7: ["ENTP", "3w2", "so/sp", "379", "ILE", "SCUEI", "VFLE", "S"], //Jimmy McGill "Saul Goodman"
+        8: ["INTJ", "1w9", "sp/so", "163", "LSE", "RCOEI", "VFLE", "PC"], //Gus Fring
+        9: ["ISTJ", "9w8", "sp/sx", "962", "SLI", "RCOAN", "FLEV", "PC"], //Mike Ehrmantraut
+        10: ["ISFP", "4w3", "sx/sp", "479", "SEI", "RLUEI", "", "SP"] //Jane Margolis
     }
-}; //199+2=201 //199
+}; //250+2=252 //250
