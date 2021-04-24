@@ -284,5 +284,103 @@ var types_db = {
         8: ["INTJ", "1w9", "sp/so", "163", "LSE", "RCOEI", "VFLE", "PC"], //Gus Fring
         9: ["ISTJ", "9w8", "sp/sx", "962", "SLI", "RCOAN", "FLEV", "PC"], //Mike Ehrmantraut
         10: ["ISFP", "4w3", "sx/sp", "479", "SEI", "RLUEI", "", "SP"] //Jane Margolis
+    },
+    "FS": { //Firefly+Serenity
+        1: ["ESTP", "8w9", "", "873", "", "SLE", "", "CS"], //Mal Reynolds
+        2: ["INTJ", "8w7", "so/sx", "852", "SLE", "", "", ""], //River Tam
+        3: ["ENFJ", "2w3", "", "", "", "", "", ""], //Inara Serra
+        4: ["ENFP", "7w6", "", "729", "", "", "", "S"], //Kaylee Frye
+        5: ["ISTJ", "1w9", "", "", "", "", "", ""], //Zoe Washburne
+        6: ["ENFP", "6w7", "", "", "", "", "", ""], //Hoban Washburn
+        7: ["ISTP", "6w7", "", "683", "SLE", "", "", ""], //Jayne Cobb
+        8: ["ENFJ", "9w8", "", "", "", "", "", ""], //Shepherd Derrial Book
+        9: ["INFJ", "2w1", "", "", "", "", "", ""], //Simon Tam
+        10: ["", "", "", "", "", "", "", ""] //The Operative
+    },
+    "LOTR": { //Lord of the Rings
+        1: ["INFP", "9w1", "sp/so", "946", "EII", "RLUAI", "FEVL", "PM"], //Frodo Baggins
+        2: ["INFJ", "6w5", "so/sp", "612", "ESI", "RCOAI", "VFEL", "M"], //Aragorn
+        3: ["ESTJ", "2w3", "so/sp", "286", "SEE", "SLOEN", "", "PC"], //Boromir
+        4: ["ENTP", "7w6", "so/sx", "728", "ILE", "RCUAN", "", "CS"], //Meriadoc "Merry" Brandybuck
+        5: ["ISFJ", "6w5", "sp/so", "629", "SEI", "SLOAN", "", "PM"], //Samwise "Sam" Gamgee
+        6: ["INTJ", "5w6", "so/sp", "512", "LII", "RCOAI", "VELF", "M"], //Gandalf the Grey
+        7: ["ESTP", "8w7", "sp/so", "873", "SEE", "SCUEN", "", "CS"], //Gimli
+        8: ["ISFP", "9w8", "sx/sp", "936", "SLI", "", "", "SP"], //Legolas
+        9: ["ESFP", "7w6", "so/sx", "792", "IEE", "SLUAN", "", "SP"], //Pippin Took
+        10: ["ENTJ", "6w5", "sp/sx", "638", "SLE", "RCOEN", "", "CM"] //Gollum
+    },
+    "C": { //Community
+        1: ["ENTP", "3w2", "so/sp", "378", "LIE", "SCUEI", "VLEF", "CS"], //Jeff Winger
+        2: ["INFP", "4w5", "so/sx", "416", "EII", "SLUAI", "EVLF", "C"], //Britta Perry
+        3: ["INTP", "5w4", "sp/sx", "549", "ILI", "RCUEI", "LVEF", "P"], //Abed Nadir
+        4: ["ENFP", "7w6", "so/sx", "793", "SEE", "SCUAN", "EFVL", "S"], //Troy Barnes
+        5: ["ISFJ", "1w2", "so/sp", "136", "ESE", "SLOEN", "VELF", "CS"], //Annie Edison
+        6: ["ESFJ", "2w1", "so/sp", "216", "ESI", "SCOAN", "", "S"], //Shirley Bennett
+        7: ["ESTP", "8w7", "sx/sp", "837", "SLE", "SLUEN", "", "C"], //Pierce Hawthorne
+        8: ["ESFP", "7w6", "so/sx", "739", "ESE", "", "", "S"], //Dean Craig Pelton
+        9: ["ENFP", "8w7", "sx/so", "872", "SLE", "SLUEI", "", "C"], //Ben "Kevin" Chang
+        10: ["ENTP", "6w7", "sp/sx", "631", "", "", "", "PS"] //Ian Duncan
+    },
+    "WD": { //The Walking Dead
+        1: ["ISTJ", "6w5", "sp/so", "612", "LSI", "RCOAN", "FVLE", "MC"], //Rick Grimes
+        2: ["ESTP", "8w7", "sx/sp", "873", "SLE", "", "VFLE", "C"], //Shane Walsh
+        3: ["ESFJ", "2w1", "so/sp", "216", "", "", "", "PC"], //Lori Grimes
+        4: ["ESFP", "6w7", "sp/sx", "684", "SEE", "", "", "CS"], //Andrea Harrison
+        5: ["ENFJ", "5w6", "sp/so", "594", "EII", "", "", "MP"], //Dale Horvath
+        6: ["ISFJ", "6w7", "so/sp", "692", "SEI", "", "FEVL", "PM"], //Glenn Rhee
+        7: ["ESTP", "6w7", "sp/so", "694", "EIE", "SLUAN", "", "CP"], //Carl Grimes
+        8: ["ISTP", "8w9", "sp/sx", "846", "SLI", "RLUAN", "LFVE", "CP"], //Daryl Dixon
+        9: ["ISFJ", "6w5", "sp/so", "694", "SEI", "RLOAN", "", "MP"], //Carol Peletier
+        10: ["ESTP", "8w7", "sp/sx", "873", "SLE", "RLUEN", "", "CS"] //Merle Dixon
+    },
+    "BBT": { //The Big Bang Theory
+        1: ["ISFJ", "9w1", "sp/so", "962", "EII", "RLOAI", "", "MP"], //Leonard Hofstadter
+        2: ["ISTJ", "5w6", "sp/so", "513", "LII", "RCOEI", "LVFE", "MC"], //Sheldon Cooper
+        3: ["ESFP", "7w6", "sx/so", "728", "ESE", "SCUAN", "EFVL", "S"], //Penny
+        4: ["ENTP", "7W6", "so/sx", "739", "ILE", "", "", "S"], //Howard Wolowitz
+        5: ["INFP", "4w5", "sx/sp", "496", "IEI", "", "ELFV", "MP"], //Rajesh "Raj" Koothrappali
+        6: ["INTP", "5w4", "sx/so", "539", "ILE", "", "", "PC"], //Leslie Winkle
+        7: ["ENTJ", "3w2", "sx/sp", "316", "LIE", "", "", "CS"], //Bernadette Rostenkowski
+        8: ["INTP", "1w2", "sp/so", "126", "LII", "RLOAI", "LVEF", "MP"], //Amy Farrah Fowler
+        9: ["ISFP", "4w3", "so/sx", "495", "", "", "", "M"], //Stuart Bloom
+        10: ["ESFJ", "2w1", "", "", "", "", "", ""] //Mary Cooper (née Tucker)
+    },
+    "TD": { //True Detective
+        1: ["INTP", "5w4", "sp/sx", "548", "ILI", "RLUEI", "LVEF", "M"], //Rustin Cohle
+        2: ["ESFP", "8w9", "so/sx", "862", "SEE", "", "", "CS"], //Marty Hart
+        3: ["ISFJ", "2w1", "", "", "", "", "", ""] //Maggie Hart
+    },
+    "PR": { //Parks and Recreation
+        1: ["ESFJ", "3w2", "so/sp", "316", "ESE", "SLOAI", "VEFL", "S"], //Leslie Knope
+        2: ["ISFJ", "2w1", "sp/so", "269", "SEI", "RLOAI", "FEVL", "PS"], //Ann Perkins
+        3: ["INTP", "5w6", "sp/sx", "592", "", "", "", "P"], //Mark Brendanawicz
+        4: ["ESTP", "3w2", "so/sx", "379", "SEE", "SLUEN", "VFEL", "S"], //Tom Haverford
+        5: ["ISTJ", "5w6", "sp/sx", "583", "SLI", "RCOEN", "FVLE", "CP"], //Ron Swanson
+        6: ["INTP", "5w4", "sx/sp", "584", "ILI", "SCUEI", "VFLE", "PC"], //April Ludgate
+        7: ["ISFJ", "9w1", "sp/so", "962", "EII", "RCOAN", "EFLV", "SP"], //Garry "Jerry" Gergich
+        8: ["ESTP", "8w7", "sp/sx", "873", "SLE", "SLUEN", "FVEL", "PC"], //Donna Meagle
+        9: ["ISTJ", "1w9", "so/sp", "163", "LII", "RLOEI", "LFVE", "P"], //Ben Wyatt
+        10: ["ENFJ", "3w2", "so/sx", "317", "ESE", "SLOAI", "VEFL", "S"] //Chris Traeger
+    },
+    "HG": { //The Hunger Games
+        1: ["ISTP", "6w5", "sp/sx", "684", "SLI", "RLUEN", "LFVE", "PC"], //Katniss Everdeen
+        2: ["ENFP", "2w3", "so/sx", "269", "EIE", "SCOAI", "EFVL", "SP"], //Peeta Mellark
+        3: ["INTP", "5w6", "sp/so", "583", "ILI", "SCUEI", "VFLE", "MC"], //Haymitch Abernathy
+        4: ["ESFJ", "2w3", "so/sx", "471", "ESE", "SLOAN", "VFLE", "S"], //Effie Trinket
+        5: ["ENTJ", "8w9", "sp/so", "853", "LSI", "", "VFLE", "CM"], //Coriolanus Snow
+        6: ["ENTJ", "3w4", "so/sp", "836", "LIE", "SCOEN", "", "CM"] //Gale Hawthorne
+    },
+    "FC": { //Fight Club
+        1: ["ENTP", "8w7", "sx/so", "854", "SLE", "SCUEI", "VFLE", "C"], //Tyler Durden
+        2: ["ISFJ", "9w1", "sp/sx", "964", "EII", "RLOAN", "FLEV", "M"], //The Narrator
+        3: ["ESFP", "4w3", "sx/sp", "487", "IEE", "SLUEN", "FELV", "SC"] //Marla Singer
+    },
+    "SC": { //Sex and the City
+        1: ["ENFP", "6w7", "so/sx", "649", "IEE", "", "EFVL", "SM"], //Carrie Bradshaw
+        2: ["ISFJ", "2w1", "sx/so", "216", "", "", "", "PM"], //Charlotte York
+        3: ["ISTJ", "6w5", "sp/so", "613", "", "", "", "MC"], //Miranda Hobbes
+        4: ["ESTP", "7w8", "sx/so", "738", "SEE", "", "", "CS"], //Samantha Jones
+        5: ["INTJ", "3w4", "sp/sx", "368", "", "", "", "CS"], //Mr. Big
+        6: ["ESFP", "9w8", "", "", "", "", "", ""] //Steve Brady
     }
-}; //250+2=252 //250
+}; //327+3=330
