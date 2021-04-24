@@ -382,5 +382,93 @@ var types_db = {
         4: ["ESTP", "7w8", "sx/so", "738", "SEE", "", "", "CS"], //Samantha Jones
         5: ["INTJ", "3w4", "sp/sx", "368", "", "", "", "CS"], //Mr. Big
         6: ["ESFP", "9w8", "", "", "", "", "", ""] //Steve Brady
+    },
+    "D": { //Dexter
+        1: ["ISTJ", "1w9", "sp/sx", "153", "LSI", "RCOEN", "", "MP"], //Dexter Morgan
+        2: ["ISFJ", "2w1", "so/sp", "269", "SEI", "", "", "P"], //Rita Bennet
+        3: ["ENFP", "7w6", "sx/so", "741", "SLI", "", "", "S"], //Debra Morgan
+        4: ["ESTP", "8w7", "sx/so", "836", "SLE", "", "", "C"], //James Doakes
+        5: ["ESTJ", "3w4", "so/sp", "386", "SEE", "", "", "C"], //Maria LaGuerta
+        6: ["ESFJ", "9w8", "so/sx", "972", "LSE", "", "", "PS"], //Angel Batista
+        7: ["ENFJ", "6w5", "", "", "", "", "", "MC"], //Harry Morgan
+        8: ["ENTP", "7w6", "", "794", "LII", "", "", ""], //Vince Masuka
+        9: ["ESTJ", "8w7", "", "", "", "", "", ""], //Tom Matthews
+        10: ["ESTP", "7w8", "", "", "", "", "", ""] //Joey Quinn
+    },
+    "DK": { //The Dark Knight
+        1: ["INTJ", "1w9", "sp/so", "153", "LSI", "RCOEI", "LVEF", "CM"], //Bruce Wayne "Batman"
+        2: ["ISFJ", "2w1", "sx/sp", "296", "", "", "", ""], //Alfred Pennyworth
+        3: ["ENTP", "7w8", "sx/sp", "784", "ILE", "SLUEI", "VFLE", "CS"], //The Joker
+        4: ["ISTJ", "1w9", "sx/sp", "", "ESI", "", "", "MC"], //James Gordon
+        5: ["ENFJ", "3w2", "so/sx", "368", "EIE", "", "", "SC"], //Harvey Dent "Two-Face"
+        6: ["ESFJ", "1w2", "so/sx", "162", "ESI", "", "", ""], //Rachel Dawes
+        7: ["INTP", "5w4", "sx/sp", "549", "ILI", "", "", "PS"], //Lucius Fox
+        8: ["ENFJ", "1w2", "", "", "", "", "", ""], //Anthony Garcia
+        9: ["ENTJ", "5w6", "", "", "", "", "", ""], //Lau
+        10: ["ESTJ", "3w2", "", "", "", "", "", ""] //Sal Maroni
+    },
+    "WSW": { //Westworld
+        1: ["INFP", "2w1", "sx/so", "216", "EII", "", "", "MS"], //Dolores Abernathy
+        2: ["ENTJ", "8w9", "sp/sx", "", "SEE", "", "", "CM"], //Maeve Millay
+        3: ["INTP", "5w6", "", "", "LII", "", "", "M"], //Benard Lowe
+        4: ["ISFJ", "9w8", "", "", "", "", "", ""], //Teddy Flood
+        5: ["ISTJ", "6w5", "", "", "", "", "", "P"], //Ashley Stubbs
+        6: ["ENTP", "7w6", "", "", "", "", "", "C"], //Lee Sizemore
+        7: ["ENTP", "6w5", "", "", "ILI", "", "", "MC"], //Elsie Hughes
+        8: ["ISTP", "8w9", "sp/sx", "", "SLE", "", "", "C"], //Man in Black
+        9: ["INTJ", "5w4", "sx/sp", "548", "ILI", "RCOEI", "", "P"], //Dr. Robert Ford
+        10: ["ESTJ", "3w4", "", "316", "", "", "", "CM"], //Theresa Cullen
+        11: ["ENTJ", "3w4", "", "", "", "", "", ""], //Charlotte Hale
+        12: ["INFJ", "9w1", "", "", "", "", "", ""], //Akecheta
+        13: ["ISFP", "9w1", "", "926", "", "", "", "PS"], //Clementine Pennyfeather
+        14: ["ESTP", "7w8", "so/sx", "738", "SLE", "", "", "S"], //Logan
+        15: ["INFP", "9w1", "", "926", "", "", "", ""] //Felix Lutz
+    },
+    "LK": { //The Lion King
+        1: ["ESFP", "7w6", "so/sx", "739", "ESE", "", "", "S"], //Simba
+        2: ["ESFJ", "6w7", "sx/so", "682", "ESI", "", "", "CS"], //Nala
+        3: ["ENTP", "7w8", "sp/sx", "784", "ILE", "", "LEVF", "CS"], //Timon
+        4: ["ESFP", "9w8", "sx/so", "972", "SEI", "", "", "SP"], //Pumbaa
+        5: ["INTJ", "3w4", "sx/so", "385", "EIE", "SLUEI", "VELF", "MC"], //Scar
+        6: ["ENFJ", "1w2", "so/sp", "126", "ESI", "SCOAI", "", "PC"] //Mufasa
+    },
+    "CB": { //Casablanca
+        1: ["ISTP", "9w8", "sp/so", "", "", "", "", ""], //Rick Blaine
+        2: ["ISFJ", "9w1", "sx/so", "", "", "", "", ""], //Ilsa Lund
+        3: ["INFJ", "1w2", "so/sp", "", "", "", "", ""] //Victor Laszlo
+    },
+    "BSG": { //Battlestar Galactica
+        1: ["ISTJ", "8w9", "so/sp", "163", "LSE", "", "", ""], //William Adama
+        2: ["INFJ", "2w3", "so/sp", "613", "IEI", "", "", "MS"], //Laura Roslin
+        3: ["ESTP", "8w7", "sp/so", "873", "SLE", "", "", "C"], //Kara "Starbuck" Thrace
+        4: ["INFP", "1w2", "sp/so", "", "", "", "", ""], //Lee 'Apollo' Adama
+        5: ["ENTP", "3w4", "so/sp", "369", "ILE", "", "", ""], //Gaius Baltar
+        6: ["INFJ", "2w1", "sx/so", "285", "", "", "", ""], //Number Six
+        7: ["ISFJ", "6w7", "sp/so", "", "", "", "", ""], //Sharon "Boomer" Valerii
+        8: ["ISTJ", "8w7", "", "", "LSI", "", "", ""], //Saul Tigh
+        9: ["ISFJ", "6w5", "", "", "", "", "", ""], //Galen Tyrol
+        10: ["ISFJ", "1w2", "", "", "", "", "", ""], //Karl "Helo" Agathon
+        11: ["ISTJ", "5w4", "", "153", "", "", "", ""], //Felix Gaeta
+        12: ["ISFJ", "9w1", "", "", "", "", "", ""], //Anastasia Dualla
+        13: ["ISFJ", "6w7", "", "", "", "", "", ""], //Billy Keikeya
+        14: ["ISFP", "7w6", "", "", "", "", "", ""], //Cally Henderson
+        15: ["ENFP", "7w6", "", "", "", "", "", ""] //Samuel Anders
+    },
+    "MM": { //Mad Men
+        1: ["ENTJ", "3w4", "sx/sp", "385", "SLE", "RCUEI", "VFLE", "MC"], //Donald "Don" Draper
+        2: ["INFJ", "6w5", "so/sx", "631", "EII", "", "LVEF", ""], //Margaret "Peggy" Olson
+        3: ["ENTP", "3w4", "so/sx", "361", "LIE", "", "VFLE", "CP"], //Peter "Pete" Campbell
+        4: ["ISFJ", "1w2", "sp/so", "162", "ESI", "", "", "P"], //Betty Draper
+        5: ["ENFJ", "3w2", "sx/so", "317", "ESE", "", "", "PM"], //Joan Holloway
+        6: ["ESFJ", "2w3", "", "", "", "", "", ""], //Salvatore "Sal" Romano
+        7: ["ENFP", "4w3", "", "", "", "", "", ""], //Paul Kinsey
+        8: ["ENFJ", "6w7", "so/sp", "641", "EII", "", "", "PC"], //Kenneth "Ken" Cosgrove
+        9: ["ISFJ", "6w5", "", "", "", "", "", ""], //Harlod "Harry" Crane
+        10: ["INTJ", "5w4", "", "", "", "", "", ""], //Rachel Menken
+        11: ["ESTP", "7w8", "sx/so", "738", "SEE", "", "", "S"], //Roger H. Sterling, Jr.
+        12: ["INTP", "9w8", "", "953", "SLI", "", "", ""], //Bertram "Bert" Cooper
+        13: ["ISFJ", "3w2", "", "", "", "", "", ""], //Henry Francis
+        14: ["ISTJ", "6w5", "sp/so", "", "", "", "", "PM"], //Lane Pryce
+        15: ["ENTP", "7w8", "", "", "SLI", "", "", ""] //Stan Rizzo
     }
-}; //327+3=330
+}; //401+3=404
