@@ -470,5 +470,65 @@ var types_db = {
         13: ["ISFJ", "3w2", "", "", "", "", "", ""], //Henry Francis
         14: ["ISTJ", "6w5", "sp/so", "", "", "", "", "PM"], //Lane Pryce
         15: ["ENTP", "7w8", "", "", "SLI", "", "", ""] //Stan Rizzo
+    },
+    "PC": { //Pirates of the Carribean
+        1: ["ENTP", "7w8", "sp/sx", "738", "ILE", "SCUEI", "FLVE", "SC"], //Captain Jack Sparrow
+        2: ["ESTJ", "8w7", "sp/so", "837", "LIE", "SCOEN", "", "CS"], //Captain Hector Barbossa
+        3: ["ISFJ", "6w7", "sx/sp", "638", "ESE", "", "", "SP"], //Joshamee Gibbs
+        4: ["ISFJ", "1w2", "sx/so", "125", "ESI", "", "", "P"], //William Turner Jr.
+        5: ["ESFP", "8w7", "so/sx", "873", "SEE", "SCOEI", "EVLF", "C"], //Elizabeth Swann
+        6: ["ISTJ", "1w9", "sp/so", "136", "ESI", "", "", "PC"] //James Norrington
+    },
+    "BVS": { //Buffy the Vampire Slayer
+        1: ["ESFP", "6w7", "so/sx", "641", "SEE", "SLUAN", "EFVL", "SP"], //Buffy Summers
+        2: ["ENTP", "6w7", "sp/so", "693", "ILE", "", "", "SP"], //Xander Harris
+        3: ["INFP", "6w5", "so/sx", "692", "EII", "RLOAI", "ELVF", "PM"], //Willow Rosenberg
+        4: ["ESTJ", "3w2", "so/sp", "368", "LSE", "SCOEN", "VFEL", "CP"], //Cordelia Chase
+        5: ["INTJ", "5w6", "so/sp", "512", "ILI", "RCOAI", "LVFE", "P"], //Rupert Giles
+        6: ["ISFJ", "1w2", "sp/so", "146", "ESI", "RLOAI", "", "MP"] //Angel
+    },
+    "SL": { //Sherlock
+        1: ["INTP", "5w6", "sx/sp", "538", "ILE", "RLUEI", "LVEF", "MC"], //Sherlock Holmes
+        2: ["ISFJ", "6w5", "sp/so", "612", "ESI", "SLOAN", "FELV", "P"], //John Watson
+        3: ["ISTJ", "1w9", "sp/sx", "162", "LSE", "RLOAN", "", "CP"], //Greg Lestrade
+        4: ["ESFJ", "2w1", "so/sx", "269", "SEI", "", "", "PS"], //Martha Louis Hudson (née Sissons)
+        5: ["ESTJ", "1w9", "sp/so", "163", "LSE", "SCOEI", "LVFE", "MP"], //Mycroft Holmes
+        6: ["INFP", "2w1", "sx/so", "269", "EII", "", "", "PM"] //Molly Hooper
+    },
+    "SVU": { //Law & Order: SVU
+        1: ["INFJ", "1w2", "sp/so", "162", "ESI", "RCOAN", "", "M"], //Olivia Benson
+        2: ["INTP", "5w6", "sp/sx", "594", "ILE", "RCUEI", "", ""], //John Munch
+        3: ["ISTJ", "6w5", "sp/so", "", "SLI", "", "", ""], //Captain Donald Cragen
+        4: ["ESTJ", "8w9", "so/sp", "862", "LSE", "SLUEN", "", "C"], //Elliot Stabler
+        5: ["ISTP", "9w8", "sp/sx", "954", "SLI", "RCUAN", "", "P"], //Odafin 'Fin' Tutuola
+        6: ["ENTJ", "1w2", "so/sp", "", "LSI", "RCOEN", "", ""] //Dr. Melinda Warner
+    },
+    "JP": { //Jurassic Park
+        1: ["ISTP", "5w6", "sp/sx", "593", "SLI", "RCOEI", "", "PC"], //Dr. Alan Grant
+        2: ["ENFJ", "2w3", "so/sx", "261", "EIE", "SCOAI", "VFEL", "SP"], //Dr. Ellie Sattler
+        3: ["ENTP", "5w6", "so/sp", "548", "ILE", "SCUEI", "VFLE", "PS"], //Dr. Ian Malcolm
+        4: ["ENFP", "7w6", "so/sx", "731", "EIE", "", "", "S"], //John Hammond
+        5: ["ISTP", "", "", "", "", "", "", ""], //Ray Arnold
+        6: ["ENTP", "7w6", "sx/sp", "784", "ILE", "", "", "S"] //Dennis Nedry
+    },
+    "CRA": { //Crazy Rich Asians
+        1: ["ENFJ", "6w7", "so/sp", "629", "IEE", "SLOAN", "", "S"], //Rachel Chu
+        2: ["ISFJ", "6w5", "so/sx", "694", "ESI", "", "", "M"], //Nick Young
+        3: ["ESTJ", "8w9", "so/sp", "836", "LSE", "", "", "CM"], //Eleanor Young
+        4: ["ENTP", "7w6", "so/sp", "793", "SEE", "", "", "SC"], //Peik Lin Goh
+        5: ["INFJ", "1w9", "so/sp", "136", "EIE", "", "", "MP"], //Astrid Young-Teo
+        6: ["ESTP", "", "", "", "", "", "", ""] //Colin Khoo
+    },
+    "SV": { //Sillicon Valley
+        1: ["INFP", "6w5", "sp/so", "641", "EII", "RLUEI", "", "M"], //Richard Hendricks
+        2: ["ENTP", "8w7", "sp/so", "873", "SEE", "SLUEN", "", "CS"], //Erlich Bachman
+        3: ["ISFP", "9w1", "", "964", "SLI", "", "", "SP"], //Nelson "Big Head" Bighetti
+        4: ["ISTP", "8w9", "sp/so", "584", "LSI", "RCUEI", "FLVE", "CP"], //Bertram Gilfoyle
+        5: ["ENFP", "3w4", "so/sx", "359", "IEE", "SCUAI", "", "SC"], //Dinesh Chugtai
+        6: ["INTJ", "5w4", "", "", "", "", "", "PC"], //Peter Gregory
+        7: ["ENFJ", "3w2", "so/sx", "", "LIE", "SCOAI", "", "SM"], //Monica Hall
+        8: ["ISFJ", "2w1", "so/sx", "269", "SEI", "SCOAN", "", "SM"], //Donald "Jared" Dunn
+        9: ["ENTJ", "8w7", "sp/so", "835", "LIE", "SLOEN", "", "C"], //Gavin Belson
+        10: ["ISTP", "8w9", "sx/sp", "853", "", "", "", ""] //Jian Yang
     }
-}; //401+3=404
+}; //437+3=440 //447
