@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Ultimate Personality Test</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .toolbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+            .toolbar a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+                .toolbar a:hover {
+                    background-color: green;
+                    color: #ddd;
+                }
+            .main a {
+                color: dodgerblue;
+            }
+    </style>
+</head>
+<body bgcolor=#bbb>
+    <div class="toolbar">
+        <a href="index.html">HOME</a>
+        <a href="test.html">TAKE THE TEST</a>
+        <a href="method.html">OUR METHOD</a>
+    </div>
+    <div class="main">
+        <h1>Our Method <a href="#problems">...and Its Problems</a></h1>
+        <div>
+            <a href="#resources">1. How the resources work</a><br>
+            <a href="#use">2. How we use them</a><br>
+            <a href="#coefficients">3.The coefficients</a><br>
+            <a href="#score">4. The scoring of each round</a><br>
+            <a href="#rounds">5. The rounds</a><br>
+            &nbsp; <a href="#mbti">5.1. MBTI</a><br>
+            &nbsp; <a href="#wing">5.2. Enneagram wing</a><br>
+            &nbsp; <a href="#instinct">5.3. Enneagram instinctual variant</a><br>
+            &nbsp; <a href="#tritype">5.4. Enneagram tritype</a><br>
+            &nbsp; <a href="#family">5.5. Enneagram tritype (again)</a><br>
+            &nbsp; <a href="#socionics">5.6. Socionics</a><br>
+            &nbsp; <a href="#big5">5.7. Big 5 / Global 5</a><br>
+            &nbsp; <a href="#ap">5.8. Attitudinal psyche</a><br>
+            &nbsp; <a href="#disc">5.9. The four temperaments / DISC</a><br>
+            <a href="#summary">6. Summary</a>
+        </div>
+        <div>
+            <p>There is a problem you might have noticed rergarding personality typing tests. When you have even a basic understanding of the theory, it can become really obvious what a question is about, which means you might answer it (either contionsly or non-contiously) so you get the results you want, rather than the one that fits you best. Our tests is trying to go around this, as it doesn't type you directly. We use two other resources, the <a href="https://openpsychometrics.org/tests/characters/">Open-Psychometrics Character Test</a> (OPM), and <a href="https://www.personality-database.com/">PersonalityDataBase</a> (PDB).</p>
+            <h2 id="resources">How these resources work</h2>
+            <p>PDB has users voting on the types of characters. The systems on the site are MBTI, Enneagram+Wing, Insinctual Variant, Tritype, Socionics, Big Five, Attitudinal Psyche and The Four Temperaments. For every profile, the type with the most votes in each system is the one assigned to the profile.</p>
+            <img src="c://users/dolev/downloads/upt/PDB.png" width="500" height="500" />
+            <p>OPM also has people voting on character profiles. This time, the users are voting on where a character falls on traits spectrums, and the final score is an average of the users' ratings.</p>
+            <img src="c://users/dolev/downloads/upt/ops.png" width="500" height="360" />
+            <h2 id="use">How we use it</h2>
+            <p>Our test is very similar to the OPM one. You rate where you fall on those spectrums, and then the algorithms score how similar you are to the characters. Then, using PDB, we score how well you fit each type by your similarity to the characters typed that way.</p>
+            <h2 id="coefficients">The correlation coefficients</h2>
+            <p>After we have your scores, we calculate your similarity to each character using two formulas: <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient">Pearson correlation</a> and <a href="https://en.wikipedia.org/wiki/Mean_absolute_difference">mean difference</a>, normalized to range between 0 and 1.</p>
+            <h2 id="score">The scores</h2>
+            <p>For each of the correlation coefficeints and each of the personality systems (not including tritypes), we rank the types and give maximum points to the 1st place, one less point to 2nd etc., and at last 1 point to the last place. If there is a tie between two types, both receive the higher score</p>
+            <h2 id="rounds">The rounds</h2>
+            <p>After we got the correlation coefficient of all characters, we calculate the average, the maximum and the minumum of the coeffients of characters of every type that isn't a tritype. The result is the type's coefficient. These will be the first 6 rounds (2 similirity algorithms * 3 summarizing algorithms) for each system but tritypes</p>
+            <img src="c://users/dolev/downloads/upt/scores.png" width="500" height="360" />
+            <p>In the photo above, it shows the scoring of MBTI types by maximum of Pearson correlation. The character with the highest Pearson correlation is an INFP, with a 81% match, therefore it's 16 points to INFP. The highest Pearson correlation of an ISFP character is 72%, same with ISTP, therefore both got 10 points.</p>
+            <p>In all of the systems we use (except for the enneagram type itself) the type you're given is made of smaller elements, such as the cognitive functions in MBTI, or any of the OCEAN traits in the Big 5. We score the types not only by the score the type got, but also try to build it by the scores their elements got, this section is dedicated to explain exactly what are the elements of each typing system, and what we do with it. For each element we calculate the coefficient for max/min/avg of PC/MD, add them together to make the type, and use the previous method to give scores to the types.</p>
+            <h3 id="mbti">MBTI</h3>
+            <p>The building bricks of MBTI are the cognitive functions</p>
+            <h3 id="wing">Ennegram</h3>
+            <p>The enneagram basic types are the elements. The enneagram wing is adjacent to the core type. To calculate the coeffient of the ennegram type, we give the core type thrice the weight of the wing.</p>
+            <img src="c://users/dolev/downloads/upt/enneagramwing.png" width="500" height="320" />
+            <p>The coefficient of type 5 is roughly 0.4 and the coefficient of type 4 is roughly 0.37, therefore the coefficient of 5w4 is 0.4*3+0.37=1.57. Since it's the highest, 5w4 get 18 points.</p>
+            <h3 id="instinct">Instinct</h3>
+            <p>While the variant is a part of the enneagram, PDB treats them as two different systems, therefore so do we. The foundational elements here are the different varinats: social, sexual and self-preserving. To calculate the coeffiecnt of an instinctual stack, we gave the main variant twice the weight of the secondary.</p>
+            <h3 id="tritype">Tritype</h3>
+            <p>The building blocks of the tritype are the very same ones we used in the wing calculation. We give the first type of the tritype a weight of 3, the second a weight of 2, and the third gets a weight of 1.</p>
+            <img src="c://users/dolev/downloads/upt/tritype.png" width="500" height="120" />
+            <p>The coefficient of type 4 is 0.37, of 5 is 0.41 and the coeffiecient of 1 is 0.39, therefore the coefficient of the 451 tritype is 3*0.37+2*0.41+0.39=2.32. Since it's the 6th highest, it gets 157 point.</p>
+            <h3 id="family">Tritype family</h3>
+            <p>Same as the normal tritype claculation, except this time the order is not importanat, so all get the same weight. Using the previous example, the 1-4-5 tritype family (The Researcher) will get a coefficient of 0.37+0.41+0.39=1.17. While the table above doesn't show all tritypes, it's quite clear that this tritype family has the largest coefficient, and therefore gets 27 points.</p>
+            <h3 id="socionics">Socionics</h3>
+            <p>Socionics types are made of functions, just like MBTI (called elements, this time).</p>
+            <h3 id="big5">Big Five</h3>
+            <p>We have ten traits here: Social/Reserved, Limbic/Calm, Organized/Unstructured, Accomodating/Egocentric, Non-curious/Inquisitive. All are equally important to make a type, therefore all traits that make a type get the same weights. The coefficient of SLOAN will be the sum of the coefficients of Social, Limbic, Organized, Accomodating and Non-curious.</p>
+            <h3 id="ap">Attitudinal Psyche</h3>
+            <p>The foundational elemts here are the aspects: Volition, Logic, Physics (denoted F, rather than P) and Emotion. The coefficients are calculated quite similarly to functions. Rather than giving each aspect a coefficient, we give a coefficient for every combination of aspect and attitude (the placing of the aspect in the type).</p>
+            <img src="c://users/dolev/downloads/upt/ap positions.png" width="500" height="300" />
+            <p>The coefficient of LVEF is the sum of the coefficients of 1L, 2V, 3E and 4F: 0.409+0.347+0.344+0.377=1.477. Since it's the second highest here, it gets 23 points.</p>
+            <p>Another way we can calculate it is to deconstruct the aspects even further. Each aspect has a positive/negative attitude towards the self and a positive/negative attiude towards others, and each combination of them gives one of the spots. In the previous example, LVEF has a positive attitude towards one's own L and V, and a negative one towards own E and F. In addition, the LVEF has a positive attitude towards other's V and F, and a negative one towards other's L and E.</p>
+            <img src="c://users/dolev/downloads/upt/ap attitudes.png" width="500" height="250" />
+            <p>So now the coefficient of LVEF will be  the sum of the coeffients of L(S+), L(O-), V(S+), V(O+), E(S-), E(O-), F(S-) and F(O+). This time it's the third highest, therefore LVEF gets 22 points.</p>
+            <h3 id="disc">Four Temperaments (DISC)</h3>
+            <p>The titular temperaments are the basics here. In opposition to previous systems, here we can't simply have a weighted sum, because if you have Sanguine>Phlegmatic. any weights assigned will put Sanguine [Dominant] before Sang-Phleg, which might not be the case. To comabt this, we take the average of the relevant correlation algorithm over all charcters, and use it as "the coefficient of *Blank*. Thus we'll consider Sanguine [Dominant] to be Sanguine+*Blank*, and not Sanguine+Sanguine. Like before, the first temperament has twice the weight of the second.</p>
+            <h2 id="summary">Summary</h2>
+            <p>So let's sum up all the rounds:</p>
+            <p>
+                1-6. MBTI type by min/max/avg of MD/PC<br>
+                7-12. Enneatype by min/max/avg of MD/PC<br>
+                13-18. Enneagram+wing by min/max/avg of MD/PC<br>
+                19-24. Instinct by min/max/avg of MD/PC<br>
+                25-30. Tritype family by min/max/avg of MD/PC<br>
+                31-36. Socionics type by min/max/avg of MD/PC<br>
+                37-42. Big Five type by min/max/avg of MD/PC<br>
+                43-48. AP type by min/max/avg of MD/PC<br>
+                49-54. Temperament by min/max/avg of MD/PC<br>
+                55-60. MBTI type by min/max/avg of MD/PC (Deconstructed, Dominant+Auxilary Function)<br>
+                61-66. MBTI type by min/max/avg of MD/PC (Deconstructed, "Sakinorva scoring")<br>
+                67-72. Enneagram+wing by min/max/avg of MD/PC (Deconstructed)<br>
+                73-78. Instinct by min/max/avg of MD/PC (Deconstructed)<br>
+                79-84. Tritype by min/max/avg of MD/PC (Deconstructed)<br>
+                85-90. Tritype family by min/max/avg of MD/PC (Deconstructed)<br>
+                91-96. Socionics type by min/max/avg of MD/PC (Deconstructed, ???????????????)<br>
+                97-102. Socionics type by min/max/avg of MD/PC (Deconstructed, ???????????????)<br>
+                103-108. Big Five type by min/max/avg of MD/PC (Deconstructed)<br>
+                109-114. AP type by min/max/avg of MD/PC (Deconstructed, positions)<br>
+                115-120. AP type by min/max/avg of MD/PC (Deconstructed, attitudes)<br>
+                121-126. Temperament by min/max/avg of MD/PC (Deconstructed)<br>
+            </p>
+            <p>
+                We have 18 rounds of MBTI scoring and 16 types in each. Total of maximum 18*16=288 points.<br>
+                We have 6 rounds of Enneatype scoring and 9 types in each. Total of maximum 6*9=54 points.<br>
+                We have 12 rounds of Enneagram scoring and 18 types in each. Total of maximum 12*18=216 points.<br>
+                We have 12 rounds of Instinctual Variant scoring and 6 types in each. Total of maximum 12*6=72 points.<br>
+                We have 6 rounds of Tritype scoring and 162 types in each. Total of maximum 6*162=972 points.<br>
+                We have 12 rounds of Tritype family scoring and 27 types in each. Total of maximum 12*27=324 points.<br>
+                We have 18 rounds of Socionics scoring and 16 types in each. Total of maximum 18*16=288 points.<br>
+                We have 12 rounds of Big Five scoring and 32 types in each. Total of maximum 12*32=384 points.<br>
+                We have 18 rounds of Attitudinal Psyche scoring and 24 types in each. Total of maximum 18*24=432 points.<br>
+                We have 12 rounds of Temperament scoring and 16 types in each. Total of maximum 12*16=192 points.<br>
+            </p>
+            <p>The matching precentage of a type is the sum of all scores it got divided by the maximum possible score</p>
+            <img src="c://users/dolev/downloads/upt/summary.png" width="500" height="480" />
+            <p>IEI, for example, collected a total of 227 points out of possible 288, which are about 78.82%</p>
+        </div>
+        <h1 id="problems">...And Its Problems</h1>
+        <div>
+            <a href="#problem1">#1 - The characters</a><br>
+            <a href="#problem2">#2 - The traits</a><br>
+            <a href="#problem3">#3 - The scales</a><br>
+            <a href="#problem4">#4 - The "intuitive bias"</a><br>
+            <a href="#problem5">#5 - The stereotypes</a><br>
+            <a href="#problem6">#6 - The personality systems</a><br>
+            <a href="#problem7">#7 - The types</a><br>
+            <a href="#problem8">#8 - The villains</a><br>
+            <a href="#problem9">#9 - The algorithms</a><br>
+            <a href="#problem10">#10 - The scoring</a><br>
+            <a href="#problem11">#11 - The dualities</a><br>
+            <a href="#problem12">#12 - The absence</a><br>
+            <a href="#problem13">#13 - The whole idea</a>
+        </div>
+        <div>
+            <p>We want to be as transparent as possible, warts and all. So here are the possoble problems with our test - some things you might want to take into account along with your resluts.</p>
+            <p>As explained earlier, our test is based on the Open-Psychometrics character test and PersonalityDataBase. Therefore any problems with their methods might be carried over to our own, on top of some other problems our algorithm has by itself. This is not us blaming them for any bad results we give - we take full responsibility for our own mistakes - but the list of problems will be incomplete if we don't include these ones. We even explain how we can solve these problems, and why we didn't do it.</p>
+            <p>If you think there is a problem or a solution we missed, just contact us and we'll gladly use your idea. Either you help us fix a problem, or you help us expand this list.</p>
+            <h2 id="problem1">Problem #1 - The characters</h2>
+            <p>The choice of characters in the OPM database is... questionable, to say the least. It's unclear why they bother including certain, or why they chose this show or movie and not the other. A character of sort is Betsy Heron from Mean Girls. Her character barely appears, so typing her or giving her scores on certain traits is nearly impossible. It'd be preferable (for us, anyway) if instead they gave her storage space to a more recognizable character. It could also be applied for an entire show or a movie, of course, where it would be preferable to replace it with a more familliar one.</p>
+            <p>The more votes, the more precise the score is (or supposed to be) - the wisdom of the crowd principle simply doesn't work when the crowd is one person large.</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>One possible solution is simply creating our own database of characters.<br>However, not using the existing one is a waste of thousands of votes, and will take the accuracy of the test a major step back. It could be useful in the long run. Maybe it's a feature we'll add someday, but their database will do for the forseeable future.</p>
+            <p>Another possible solution is filter the characters. The problem with this one is arbitrariness. Is there a reason a character with 9 votes shouldn't be included and a character with 10 should? Wherever you put the line, it seems arbitrary. One could claim that while arbitrary, a line has to be drawn somewhere, but we don't find it to be the case.</p>
+            <h2 id="problem2">Problem #2 - The traits</h2>
+            <p>Some questions in the test are better than others. Some are quite intersting and useful, but other questions are terrible. It could be something that has nothing to do with personality ("old vs young", for example), but it could be worse.</p>
+            <p>A good example for a bad question is the "socialist vs libertarian" axis. Not only one's personality and one's politics are unrelated (in theory), but also these two things are completely independent. Noam Chomsky is a radical libertarian socialist and Augusto Pinochet was a radical authoritarian capitalist. Imagine a "green vs long" spectrum. Where would you put a crocodile? And a ladybug? It just doesn't make sense.</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>Similarly to problem #1, we can create our own, but this solution has exactly the same problem.<br>As for filtering the results, it still can work, but now the arbitrariness is switched for subjectivity. Maybe we think a question is bad, but you'd say it's actually good and it's a shame we decided to dump it.</p>
+            <p>So instead of filtering it, we can rank them. There are 400 questions, most people won't answer all of them - maybe if we put the better question first it'll help people choose the better ones. So that's exactly the solution we're going for. We hope to soon add a question rating that will solve this problem, at least partially.</p>
+            <h2 id="problem3">Problem #3 - The scales</h2>
+            <p>Maybe it's hard to know where you stand when it ranges from 1 to 100, maybe you'd prefer it if it was a 1-10, or even 1-5 range.</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>The way to solve it is quite straightforward, and we'd like to try it in the future.</p>
+            <h2 id="problem4">Problem #4 - The "intuitive bias"</h2>
+            <p>So far with the problems in the OPM test, now for problems based on using PDB. The first one that always comes up when the website is mentioned is the myth of intuitive bias: people in the website vote intuitive for characters they like and sensing for characters they don't.</p>
+            <p>As you probabpy guessed, we don't think that's a real thing, and here's an article against the claim. It's true that most users identify as intuitive, but it's also true that most of them identify as introverts, and you never hear claims regarding a possible introverted bias.</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>To solve it we can add weights to certain types, making it "harder" to get intuitive types. But as there is no way of knowing how massive the intuitive bias is or if it exists at all, the best weights to be chosen are left unknown. So even if we did believe in it, the best we could do is telling you to bear that in mind as you receive your results. (We <i>could</i> try and expirement with different weights, asking users to rate the accuracy until we find the sweet optimum, but that's a lot of work that probably doesn't worth it)</p>
+            <h2 id="problem5">Problem #5 - The stereotypes</h2>
+            <p>Another claim regarding the validity of PDB typing is "people there are typing by stereotypes", which could be true. People can see a jock and immediately type them as ESTP, or they see a crazy scientist and go for INTP or ENTP without hesitation.</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>For the first time here, we don't think we can. Even if this claim is true (which might not be the case), the effect it has on the types is vague and even less clear than the one of a possible intuitive bias.</p>
+            <h2 id="problem6">Problem #6 - The personality systems</h2>
+            <p>Some typing systems in PDB were added more recently than others. In mid 2020 they added 5 new personality systems (Moral Alignment was later removed), and another two were added as recently as March 2021.</p>
+            <p>Naturally, the new systems have significantly fewer votes than the old ones, sometimes determining a type based on a single vote, or leaving a character typeless. It goes back to what happens at Problem #1, when we don't have enough votes.</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>Once again, we don't seem to have an actual way to solve it, but rather just wait and the number of votes should go higher, making our predictions for these systems more accurate.</p>
+            <h2 id="problem7">Problem #7 - The types</h2>
+            <p>Let's look at these three characters from the database. Azula from Avatar: The Last Airbender, Princess Leia Organa from Star Wars and Norman Wilson from The Wire.</p>
+            <p>
+                At the moment of writing this text,<br>
+                Azula has 1104 ENTJ votes out of 1189 (92.9%)<br>
+                Leia has 330 ENTJ votes out of 668 (49.4%)<br>
+                Norman has 1 ENTJ vote out of 1 (100%)<br>
+                See the problem?
+            </p>
+            <p>All of them are equally ENTJ in our types database. Wether you're a certain ENTJ like Azula, torn between ENTJ and ESTJ like Leia, or have a single vote like Norman you will be categorized as ENTJ.</p>
+            <p>^The numbers probably have changed by the time you're reading it, maybe even Leia and Norman are no longer typed as ENTJs in our data, but the point holds.</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>The comprehensive way of doing it is taking all votes into account. Thus a similarity to Leia will give almost the same boost to your ESTJ score as it gives to your ENTJ score. However, this will make our database multiple times larger and require frequent updates (and as PDB doesn't grant access to the raw data, all database updates must be done manually.)</p>
+            <p>A simpler idea may be constructing a certainty coefficiant formula based on number of votes for the specific type and the number of votes in total. It loses the ESTJ side of Leia, but it does mean some characters count for more than others (which also solves problem #1, to a certain extent.) It still has the previously mentioned databae problems, but much less prominantly.</p>
+            <p>Maybe we'll do it in the future, but for now it seems like an unnecessary complication.</p>
+            <h2 id="problem8">Problem #8 - The villains</h2>
+            <p>We mentioned Azula being an ENTJ in the previous section. Some types make much easier-to-write villains. For example, ENTJ (all xxTJ types, in fact), enneagram 8 or 3, and the mainly Choleric Temperament. Of course, most ENTJs are not villains, but when it comes to creating a character, it's the simplest way to go. We're not implying these are bad villains in any way - Azula is exactly the types mentioned and she is brilliant - we're just saying that the number of INTJ villains on the character list is probably much larger than the number of ESFJ villains. It means that our test might underestimate how fitting you are to a "villainous" type (unless you're actually a villain. In that case it might overestimate these, and please stay away from us.)</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>The same way mentioned in Problem #4, we could give some weights for the types, making it "easier" to get a "villainous" type. However, same as before, it's unclear what exactly the weights need to be. Maybe it's even a part of a bigger problem, regarding levels of health? Maybe a healthy enneagram 2 will be affected by the unhealthy 2s on our list exactly the same way a healthy 8 will from the unhealthy 8s? The same as with the intuitive bias, the best we can do is to tell you this information and let you think for yourself what to do with it.</p>
+            <h2 id="problem9">Problem #9 - The algorithms</h2>
+            <p>Now for the problems that are definitely our fault, and we can't possibly even begin to blame others for.</p>
+            <p>To calculate the similarities, we use Pearson correlation and mean difference, and for each we score types by average, minimum and maximum.</p>
+            <p>But here's the question: why? Why not using other formulas, such as cosine similarity or a simple Euclidean distance? Maybe scoring using minimum is hurtful, especially considering the previous problem, and should be replaced by median? It seems arbitrary, and there are probably better ways to score.</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>We use Pearson correlation and mean difference is because these are the systems they use in the OPM test, and we use min, max & average is because the project started as a lame excel sheet (parts of it are shown in the first section), and these are the most accessible options there.</p>
+            <p>You're correct. It <b>is</b> arbitrary, and there probably are better ways to score. We'd like very much to test some of these in the future. Stay updated and you could help us improve.</p>
+            <h2 id="problem10">Problem #10 - The scoring</h2>
+            <p>Looking at a system of 16 types (such as MBTI or Socionics), the type with the highest score gets 16 points, the one in second gets 15 points, etc., the one who came last gets 1 point. But maybe it shouldn't be that way. Maybe it should be proportional to the scores (meaning, a 1st place by a margin will get a higher score than a 1st place with a close 2nd.)</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>Same as before, we'd like very much to test it in the future.</p>
+            <h2 id="problem11">Problem #11 - The dualities</h2>
+            <p>Some types have subtypes, different sorts of people all conveyed in the same type. For example, two people with the same enneagram type can have a different variant, a different tritype or a different wing. Not to mention the previously-discussed levels of health. You see the problem, right?</p>
+            <p>If you're a social 6w5 629, then all the self-preserving 6s and especially the counter-phobic sexual 6s, the 6w7s, social 6w5s with (for example) 683 tritype, and even other social 6w5 629s that are different from you just because of the sheer complexity of humanity. All of these may hurt your type 6 score, might resulting in other types getting higher scores, despite 6 being the one that describes you best.</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>Wow, this section is really repetative, huh? That's basically the same problem as #8 or #9. It's all intertwined. Does it even make sense to divide them like that?</p>
+            <h2 id="problem12">Problem #12 - The absence</h2>
+            <p>Why not including the character similarities? We're calculating them anyway...</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>True, we could do that, but that would probably steal traffic from the OPM test, and it would be unfair if we did. So we encourage you to take their test as well.</p>
+            <h2 id="problem13">Problem #13 - The whole idea</h2>
+            <p>"I just don't like the idea of typing people like that."</p>
+            <h3>How can we solve it, and why didn't we?</h3>
+            <p>¯\_(ツ)_/¯</p>
+        </div>
+    </div>
+</body>
+</html>
