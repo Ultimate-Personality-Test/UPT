@@ -2687,7 +2687,7 @@ function avg(types_db, types_scores2, index, method) {
     for (var universe in types_db) {
         for (var character in types_db[universe]) {
             var da_type = types_db[universe][character][index];
-            document.getElementById("debug").innerHTML = universe + " " + character + " " + da_type;
+            //document.getElementById("debug").innerHTML = universe + " " + character + " " + da_type;
             if (da_type != "") {
                 types_scores[da_type][0] += character_scores[universe][character][method];
                 types_scores[da_type][1]++;
