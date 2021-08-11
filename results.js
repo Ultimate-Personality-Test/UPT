@@ -1,16 +1,6 @@
 var query = window.location.search.substring(3);
 var user_scores = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
-var length = 400;
-var MBTI_scores = [["ENFJ",0], ["ENFP",0], ["ENTJ",0], ["ENTP",0], ["ESFJ",0], ["ESFP",0], ["ESTJ",0], ["ESTP",0], ["INFJ",0], ["INFP",0], ["INTJ",0], ["INTP",0], ["ISFJ",0], ["ISFP",0], ["ISTJ",0], ["ISTP",0]];
-var enneatype_scores = [[1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0]];
-var enneawing_scores = [["1w9", 0], ["1w2", 0], ["2w1", 0], ["2w3", 0], ["3w2", 0], ["3w4", 0], ["4w3", 0], ["4w5", 0], ["5w4", 0], ["5w6", 0], ["6w5", 0], ["6w7", 0], ["7w6", 0], ["7w8", 0], ["8w7", 0], ["8w9", 0], ["9w8", 0], ["9w1", 0]];
-var variant_scores = [["so/sp", 0], ["so/sx", 0], ["sp/so", 0], ["sp/sx", 0], ["sx/so", 0], ["sx/sp", 0]];
-var tritype_scores = [[125, 0], [126, 0], [127, 0], [135, 0], [136, 0], [137, 0], [145, 0], [146, 0], [147, 0], [152, 0], [153, 0], [154, 0], [162, 0], [163, 0], [164, 0], [172, 0], [173, 0], [174, 0], [215, 0], [216, 0], [217, 0], [251, 0], [258, 0], [259, 0], [261, 0], [268, 0], [269, 0], [271, 0], [278, 0], [279, 0], [285, 0], [286, 0], [287, 0], [295, 0], [296, 0], [297, 0], [315, 0], [316, 0], [317, 0], [351, 0], [358, 0], [359, 0], [361, 0], [368, 0], [369, 0], [371, 0], [378, 0], [379, 0], [385, 0], [386, 0], [387, 0], [395, 0], [396, 0], [397, 0], [415, 0], [416, 0], [417, 0], [451, 0], [458, 0], [459, 0], [461, 0], [468, 0], [469, 0], [471, 0], [478, 0], [479, 0], [485, 0], [486, 0], [487, 0], [495, 0], [496, 0], [497, 0], [512, 0], [513, 0], [514, 0], [521, 0], [528, 0], [529, 0], [531, 0], [538, 0], [539, 0], [541, 0], [548, 0], [549, 0], [582, 0], [583, 0], [584, 0], [592, 0], [593, 0], [594, 0], [612, 0], [613, 0], [614, 0], [621, 0], [628, 0], [629, 0], [631, 0], [638, 0], [639, 0], [641, 0], [648, 0], [649, 0], [682, 0], [683, 0], [684, 0], [692, 0], [693, 0], [694, 0], [712, 0], [713, 0], [714, 0], [721, 0], [728, 0], [729, 0], [731, 0], [738, 0], [739, 0], [741, 0], [748, 0], [749, 0], [782, 0], [783, 0], [784, 0], [792, 0], [793, 0], [794, 0], [825, 0], [826, 0], [827, 0], [835, 0], [836, 0], [837, 0], [845, 0], [846, 0], [847, 0], [852, 0], [853, 0], [854, 0], [862, 0], [863, 0], [864, 0], [872, 0], [873, 0], [874, 0], [925, 0], [926, 0], [927, 0], [935, 0], [936, 0], [937, 0], [945, 0], [946, 0], [947, 0], [952, 0], [953, 0], [954, 0], [962, 0], [963, 0], [964, 0], [972, 0], [973, 0], [974, 0]];
-var socionics_scores = [["EIE", 0], ["EII", 0], ["ESE", 0], ["ESI", 0], ["IEE", 0], ["IEI", 0], ["ILE", 0], ["ILI", 0], ["LIE", 0], ["LII", 0], ["LSE", 0], ["LSI", 0], ["SEE", 0], ["SEI", 0], ["SLE", 0], ["SLI", 0]];
-var big5_scores = [["RCOAI", 0], ["RCOAN", 0], ["RCOEI", 0], ["RCOEN", 0], ["RCUAI", 0], ["RCUAN", 0], ["RCUEI", 0], ["RCUEN", 0], ["RLOAI", 0], ["RLOAN", 0], ["RLOEI", 0], ["RLOEN", 0], ["RLUAI", 0], ["RLUAN", 0], ["RLUEI", 0], ["RLUEN", 0], ["SCOAI", 0], ["SCOAN", 0], ["SCOEI", 0], ["SCOEN", 0], ["SCUAI", 0], ["SCUAN", 0], ["SCUEI", 0], ["SCUEN", 0], ["SLOAI", 0], ["SLOAN", 0], ["SLOEI", 0], ["SLOEN", 0], ["SLUAI", 0], ["SLUAN", 0], ["SLUEI", 0], ["SLUEN", 0]];
-var ap_scores = [["EFLV", 0], ["EFVL", 0], ["ELFV", 0], ["ELVF", 0], ["EVFL", 0], ["EVLF", 0], ["FELV", 0], ["FEVL", 0], ["FLEV", 0], ["FLVE", 0], ["FVEL", 0], ["FVLE", 0], ["LEFV", 0], ["LEVF", 0], ["LFEV", 0], ["LFVE", 0], ["LVEF", 0], ["LVFE", 0], ["VEFL", 0], ["VELF", 0], ["VFEL", 0], ["VFLE", 0], ["VLEF", 0], ["VLFE", 0]];
-var ft_scores = [["Choleric [Dominant]", 0], ["Choleric-Melancholic", 0], ["Choleric-Phlegmatic", 0], ["Choleric-Sanguine", 0], ["Melancholic-Choleric", 0], ["Melancholic [Dominant]", 0], ["Melancholic-Phlegmatic", 0], ["Melancholic-Sanguine", 0], ["Phlegmatic-Choleric", 0], ["Phlegmatic-Melancholic", 0], ["Phlegmatic [Dominant]", 0], ["Phlegmatic-Sanguine", 0], ["Sanguine-Choleric", 0], ["Sanguine-Melancholic", 0], ["Sanguine-Phlegmatic", 0], ["Sanguine [Dominant]", 0]];
-var display_array = [["MBTI", 16, 32], ["enneatype", 9, 18], ["enneawing", 18, 36], ["variant", 6, 12], ["tritype", 162, 324], ["socionics", 16, 32], ["big5", 32, 64], ["ap", 24, 48], ["4t", 16, 32]];
+var display_array = [["MBTI", 16, 480], ["enneatype", 9, 54], ["enneawing", 18, 216], ["variant", 6, 72], ["tritype", 162, 972], ["family", 27, 324], ["socionics", 16, 192], ["big5", 32, 384], ["ap", 24, 432], ["4t", 16, 192]];
 var character_scores =
     {
         "GOT": {
@@ -2582,8 +2572,56 @@ var character_scores =
 
     };
 
+var MBTI_scores = { "ENFJ": 0, "ENFP": 0, "ENTJ": 0, "ENTP": 0, "ESFJ": 0, "ESFP": 0, "ESTJ": 0, "ESTP": 0, "INFJ": 0, "INFP": 0, "INTJ": 0, "INTP": 0, "ISFJ": 0, "ISFP": 0, "ISTJ": 0, "ISTP": 0 };
+var enneatype_scores = { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0 };
+var enneawing_scores = { "1w9": 0, "1w2": 0, "2w1": 0, "2w3": 0, "3w2": 0, "3w4": 0, "4w3": 0, "4w5": 0, "5w4": 0, "5w6": 0, "6w5": 0, "6w7": 0, "7w6": 0, "7w8": 0, "8w7": 0, "8w9": 0, "9w8": 0, "9w1": 0 };
+var variant_scores = { "so/sp": 0, "so/sx": 0, "sp/so": 0, "sp/sx": 0, "sx/so": 0, "sx/sp": 0 };
+var tritype_scores = { "125": 0, "126": 0, "127": 0, "135": 0, "136": 0, "137": 0, "145": 0, "146": 0, "147": 0, "152": 0, "153": 0, "154": 0, "162": 0, "163": 0, "164": 0, "172": 0, "173": 0, "174": 0, "215": 0, "216": 0, "217": 0, "251": 0, "258": 0, "259": 0, "261": 0, "268": 0, "269": 0, "271": 0, "278": 0, "279": 0, "285": 0, "286": 0, "287": 0, "295": 0, "296": 0, "297": 0, "315": 0, "316": 0, "317": 0, "351": 0, "358": 0, "359": 0, "361": 0, "368": 0, "369": 0, "371": 0, "378": 0, "379": 0, "385": 0, "386": 0, "387": 0, "395": 0, "396": 0, "397": 0, "415": 0, "416": 0, "417": 0, "451": 0, "458": 0, "459": 0, "461": 0, "468": 0, "469": 0, "471": 0, "478": 0, "479": 0, "485": 0, "486": 0, "487": 0, "495": 0, "496": 0, "497": 0, "512": 0, "513": 0, "514": 0, "521": 0, "528": 0, "529": 0, "531": 0, "538": 0, "539": 0, "541": 0, "548": 0, "549": 0, "582": 0, "583": 0, "584": 0, "592": 0, "593": 0, "594": 0, "612": 0, "613": 0, "614": 0, "621": 0, "628": 0, "629": 0, "631": 0, "638": 0, "639": 0, "641": 0, "648": 0, "649": 0, "682": 0, "683": 0, "684": 0, "692": 0, "693": 0, "694": 0, "712": 0, "713": 0, "714": 0, "721": 0, "728": 0, "729": 0, "731": 0, "738": 0, "739": 0, "741": 0, "748": 0, "749": 0, "782": 0, "783": 0, "784": 0, "792": 0, "793": 0, "794": 0, "825": 0, "826": 0, "827": 0, "835": 0, "836": 0, "837": 0, "845": 0, "846": 0, "847": 0, "852": 0, "853": 0, "854": 0, "862": 0, "863": 0, "864": 0, "872": 0, "873": 0, "874": 0, "925": 0, "926": 0, "927": 0, "935": 0, "936": 0, "937": 0, "945": 0, "946": 0, "947": 0, "952": 0, "953": 0, "954": 0, "962": 0, "963": 0, "964": 0, "972": 0, "973": 0, "974": 0 };
+var socionics_scores = { "EIE": 0, "EII": 0, "ESE": 0, "ESI": 0, "IEE": 0, "IEI": 0, "ILE": 0, "ILI": 0, "LIE": 0, "LII": 0, "LSE": 0, "LSI": 0, "SEE": 0, "SEI": 0, "SLE": 0, "SLI": 0 };
+var big5_scores = { "RCOAI": 0, "RCOAN": 0, "RCOEI": 0, "RCOEN": 0, "RCUAI": 0, "RCUAN": 0, "RCUEI": 0, "RCUEN": 0, "RLOAI": 0, "RLOAN": 0, "RLOEI": 0, "RLOEN": 0, "RLUAI": 0, "RLUAN": 0, "RLUEI": 0, "RLUEN": 0, "SCOAI": 0, "SCOAN": 0, "SCOEI": 0, "SCOEN": 0, "SCUAI": 0, "SCUAN": 0, "SCUEI": 0, "SCUEN": 0, "SLOAI": 0, "SLOAN": 0, "SLOEI": 0, "SLOEN": 0, "SLUAI": 0, "SLUAN": 0, "SLUEI": 0, "SLUEN": 0 };
+var ap_scores = { "EFLV": 0, "EFVL": 0, "ELFV": 0, "ELVF": 0, "EVFL": 0, "EVLF": 0, "FELV": 0, "FEVL": 0, "FLEV": 0, "FLVE": 0, "FVEL": 0, "FVLE": 0, "LEFV": 0, "LEVF": 0, "LFEV": 0, "LFVE": 0, "LVEF": 0, "LVFE": 0, "VEFL": 0, "VELF": 0, "VFEL": 0, "VFLE": 0, "VLEF": 0, "VLFE": 0 };
+var ft_scores = { "Choleric [Dominant]": 0, "Choleric-Melancholic": 0, "Choleric-Phlegmatic": 0, "Choleric-Sanguine": 0, "Melancholic-Choleric": 0, "Melancholic [Dominant]": 0, "Melancholic-Phlegmatic": 0, "Melancholic-Sanguine": 0, "Phlegmatic-Choleric": 0, "Phlegmatic-Melancholic": 0, "Phlegmatic [Dominant]": 0, "Phlegmatic-Sanguine": 0, "Sanguine-Choleric": 0, "Sanguine-Melancholic": 0, "Sanguine-Phlegmatic": 0, "Sanguine [Dominant]": 0 };
+var family_scores = { "1-2-5": 0, "1-2-6": 0, "1-2-7": 0, "1-3-5": 0, "1-3-6": 0, "1-3-7": 0, "1-4-5": 0, "1-4-6": 0, "1-4-7": 0, "2-5-8": 0, "2-5-9": 0, "2-6-8": 0, "2-6-9": 0, "2-7-8": 0, "2-7-9": 0, "3-5-8": 0, "3-5-9": 0, "3-6-8": 0, "3-6-9": 0, "3-7-8": 0, "3-7-9": 0, "4-5-8": 0, "4-5-9": 0, "4-6-8": 0, "4-6-9": 0, "4-7-8": 0, "4-7-9": 0 };
+
+var function_scores = { "Ni": 0, "Ne": 0, "Si": 0, "Se": 0, "Fi": 0, "Fe": 0, "Ti": 0, "Te": 0 }; 
+var ennea_scores = { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0 };
+var instinct_scores = { "so": 0, "sp": 0, "sx": 0 };
+var trait_scores = { "R": 0, "S": 0, "C": 0, "L": 0, "O": 0, "U": 0, "A": 0, "E": 0, "I": 0, "N": 0 };
+var aspect_scores = { "E1": 0, "F1": 0, "L1": 0, "V1": 0, "E2": 0, "F2": 0, "L2": 0, "V2": 0, "E3": 0, "F3": 0, "L3": 0, "V3": 0, "E4": 0, "F4": 0, "L4": 0, "V4": 0 };
+var attitude_scores = { "Es+": 0, "Es-": 0, "Eo+": 0, "Eo-": 0, "Fs+": 0, "Fs-": 0, "Fo+": 0, "Fo-": 0, "Ls+": 0, "Ls-": 0, "Lo+": 0, "Lo-": 0, "Vs+": 0, "Vs-": 0, "Vo+": 0, "Vo-": 0 };
+var temperament_scores = { "": 0, "Choleric": 0, "Melancholic": 0, "Phlegmatic": 0, "Sanguine": 0 };
+
+var dom_func = { "": "", "ENFJ": "Fe", "ENFP": "Ne", "ENTJ": "Te", "ENTP": "Ne", "ESFJ": "Fe", "ESFP": "Se", "ESTJ": "Te", "ESTP": "Se", "INFJ": "Ni", "INFP": "Fi", "INTJ": "Ni", "INTP": "Ti", "ISFJ": "Si", "ISFP": "Fi", "ISTJ": "Si", "ISTP": "Ti" };
+var aux_func = { "": "", "ENFJ": "Ni", "ENFP": "Fi", "ENTJ": "Ni", "ENTP": "Ti", "ESFJ": "Si", "ESFP": "Fi", "ESTJ": "Si", "ESTP": "Ti", "INFJ": "Fe", "INFP": "Ne", "INTJ": "Te", "INTP": "Ne", "ISFJ": "Fe", "ISFP": "Se", "ISTJ": "Te", "ISTP": "Se" };
+var tert_func = { "": "", "ENFJ": "Se", "ENFP": "Te", "ENTJ": "Se", "ENTP": "Fe", "ESFJ": "Ne", "ESFP": "Te", "ESTJ": "Ne", "ESTP": "Fe", "INFJ": "Ti", "INFP": "Si", "INTJ": "Fi", "INTP": "Si", "ISFJ": "Ti", "ISFP": "Ni", "ISTJ": "Fi", "ISTP": "Ni" };
+var inf_func = { "": "", "ENFJ": "Ti", "ENFP": "Si", "ENTJ": "Fi", "ENTP": "Si", "ESFJ": "Ti", "ESFP": "Ni", "ESTJ": "Fi", "ESTP": "Ni", "INFJ": "Se", "INFP": "Te", "INTJ": "Se", "INTP": "Fe", "ISFJ": "Ne", "ISFP": "Te", "ISTJ": "Ne", "ISTP": "Fe" };
+var main_variant = { "": "", "so/sp": "so", "so/sx": "so", "sp/so": "sp", "sp/sx": "sp", "sx/so": "sx", "sx/sp": "sx" };
+var main_temperament = { "": "", "Choleric [Dominant]": "Choleric", "Choleric-Melancholic": "Choleric", "Choleric-Phlegmatic": "Choleric", "Choleric-Sanguine": "Choleric", "Melancholic-Choleric": "Melancholic", "Melancholic [Dominant]": "Melancholic", "Melancholic-Phlegmatic": "Melancholic", "Melancholic-Sanguine": "Melancholic", "Phlegmatic-Choleric": "Phlegmatic", "Phlegmatic-Melancholic": "Phlegmatic", "Phlegmatic [Dominant]": "Phlegmatic", "Phlegmatic-Sanguine": "Phlegmatic", "Sanguine-Choleric": "Sanguine", "Sanguine-Melancholic": "Sanguine", "Sanguine-Phlegmatic": "Sanguine", "Sanguine [Dominant]": "Sanguine"};
+var secondary_temperament = { "": "", "Choleric [Dominant]": "", "Choleric-Melancholic": "Melancholic", "Choleric-Phlegmatic": "Phlegmatic", "Choleric-Sanguine": "Sanguine", "Melancholic-Choleric": "Choleric", "Melancholic [Dominant]": "", "Melancholic-Phlegmatic": "Phlegmatic", "Melancholic-Sanguine": "Sanguine", "Phlegmatic-Choleric": "Choleric", "Phlegmatic-Melancholic": "Melancholic", "Phlegmatic [Dominant]": "", "Phlegmatic-Sanguine": "Sanguine", "Sanguine-Choleric": "Choleric", "Sanguine-Melancholic": "Melancholic", "Sanguine-Phlegmatic": "Phlegmatic", "Sanguine [Dominant]": "" };
+var trait1 = { "": "", "RCOAI": "R", "RCOAN": "R", "RCOEI": "R", "RCOEN": "R", "RCUAI": "R", "RCUAN": "R", "RCUEI": "R", "RCUEN": "R", "RLOAI": "R", "RLOAN": "R", "RLOEI": "R", "RLOEN": "R", "RLUAI": "R", "RLUAN": "R", "RLUEI": "R", "RLUEN": "R", "SCOAI": "S", "SCOAN": "S", "SCOEI": "S", "SCOEN": "S", "SCUAI": "S", "SCUAN": "S", "SCUEI": "S", "SCUEN": "S", "SLOAI": "S", "SLOAN": "S", "SLOEI": "S", "SLOEN": "S", "SLUAI": "S", "SLUAN": "S", "SLUEI": "S", "SLUEN": "S" };
+var trait2 = { "": "", "RCOAI": "C", "RCOAN": "C", "RCOEI": "C", "RCOEN": "C", "RCUAI": "C", "RCUAN": "C", "RCUEI": "C", "RCUEN": "C", "RLOAI": "L", "RLOAN": "L", "RLOEI": "L", "RLOEN": "L", "RLUAI": "L", "RLUAN": "L", "RLUEI": "L", "RLUEN": "L", "SCOAI": "C", "SCOAN": "C", "SCOEI": "C", "SCOEN": "C", "SCUAI": "C", "SCUAN": "C", "SCUEI": "C", "SCUEN": "C", "SLOAI": "L", "SLOAN": "L", "SLOEI": "L", "SLOEN": "L", "SLUAI": "L", "SLUAN": "L", "SLUEI": "L", "SLUEN": "L" };
+var trait3 = { "": "", "RCOAI": "O", "RCOAN": "O", "RCOEI": "O", "RCOEN": "O", "RCUAI": "U", "RCUAN": "U", "RCUEI": "U", "RCUEN": "U", "RLOAI": "O", "RLOAN": "O", "RLOEI": "O", "RLOEN": "O", "RLUAI": "U", "RLUAN": "U", "RLUEI": "U", "RLUEN": "U", "SCOAI": "O", "SCOAN": "O", "SCOEI": "O", "SCOEN": "O", "SCUAI": "U", "SCUAN": "U", "SCUEI": "U", "SCUEN": "U", "SLOAI": "O", "SLOAN": "O", "SLOEI": "O", "SLOEN": "O", "SLUAI": "U", "SLUAN": "U", "SLUEI": "U", "SLUEN": "U" };
+var trait4 = { "": "", "RCOAI": "A", "RCOAN": "A", "RCOEI": "E", "RCOEN": "E", "RCUAI": "A", "RCUAN": "A", "RCUEI": "E", "RCUEN": "E", "RLOAI": "A", "RLOAN": "A", "RLOEI": "E", "RLOEN": "E", "RLUAI": "A", "RLUAN": "A", "RLUEI": "E", "RLUEN": "E", "SCOAI": "A", "SCOAN": "A", "SCOEI": "E", "SCOEN": "E", "SCUAI": "A", "SCUAN": "A", "SCUEI": "E", "SCUEN": "E", "SLOAI": "A", "SLOAN": "A", "SLOEI": "E", "SLOEN": "E", "SLUAI": "A", "SLUAN": "A", "SLUEI": "E", "SLUEN": "E" };
+var trait5 = { "": "", "RCOAI": "I", "RCOAN": "N", "RCOEI": "I", "RCOEN": "N", "RCUAI": "I", "RCUAN": "N", "RCUEI": "I", "RCUEN": "N", "RLOAI": "I", "RLOAN": "N", "RLOEI": "I", "RLOEN": "N", "RLUAI": "I", "RLUAN": "N", "RLUEI": "I", "RLUEN": "N", "SCOAI": "I", "SCOAN": "N", "SCOEI": "I", "SCOEN": "N", "SCUAI": "I", "SCUAN": "N", "SCUEI": "I", "SCUEN": "N", "SLOAI": "I", "SLOAN": "N", "SLOEI": "I", "SLOEN": "N", "SLUAI": "I", "SLUAN": "N", "SLUEI": "I", "SLUEN": "N" };
+var aspectEs = { "": "", "EFLV": "Es+", "EFVL": "Es+", "ELFV": "Es+", "ELVF": "Es+", "EVFL": "Es+", "EVLF": "Es+", "FELV": "Es+", "FEVL": "Es+", "FLEV": "Es-", "FLVE": "Es-", "FVEL": "Es-", "FVLE": "Es-", "LEFV": "Es+", "LEVF": "Es+", "LFEV": "Es-", "LFVE": "Es-", "LVEF": "Es-", "LVFE": "Es-", "VEFL": "Es+", "VELF": "Es+", "VFEL": "Es-", "VFLE": "Es-", "VLEF": "Es-", "VLFE": "Es-" };
+var aspectEo = { "": "", "EFLV": "Eo-", "EFVL": "Eo-", "ELFV": "Eo-", "ELVF": "Eo-", "EVFL": "Eo-", "EVLF": "Eo-", "FELV": "Eo+", "FEVL": "Eo+", "FLEV": "Eo-", "FLVE": "Eo+", "FVEL": "Eo-", "FVLE": "Eo+", "LEFV": "Eo+", "LEVF": "Eo+", "LFEV": "Eo-", "LFVE": "Eo+", "LVEF": "Eo-", "LVFE": "Eo+", "VEFL": "Eo+", "VELF": "Eo+", "VFEL": "Eo-", "VFLE": "Eo+", "VLEF": "Eo-", "VLFE": "Eo+" };
+var aspectFs = { "": "", "EFLV": "Fs+", "EFVL": "Fs+", "ELFV": "Fs-", "ELVF": "Fs-", "EVFL": "Fs-", "EVLF": "Fs-", "FELV": "Fs+", "FEVL": "Fs+", "FLEV": "Fs+", "FLVE": "Fs+", "FVEL": "Fs+", "FVLE": "Fs+", "LEFV": "Fs-", "LEVF": "Fs-", "LFEV": "Fs+", "LFVE": "Fs+", "LVEF": "Fs-", "LVFE": "Fs-", "VEFL": "Fs-", "VELF": "Fs-", "VFEL": "Fs+", "VFLE": "Fs+", "VLEF": "Fs-", "VLFE": "Fs-" };
+var aspectFo = { "": "", "EFLV": "Fo+", "EFVL": "Fo+", "ELFV": "Fo-", "ELVF": "Fo+", "EVFL": "Fo-", "EVLF": "Fo+", "FELV": "Fo-", "FEVL": "Fo-", "FLEV": "Fo-", "FLVE": "Fo-", "FVEL": "Fo-", "FVLE": "Fo-", "LEFV": "Fo-", "LEVF": "Fo+", "LFEV": "Fo+", "LFVE": "Fo+", "LVEF": "Fo+", "LVFE": "Fo-", "VEFL": "Fo-", "VELF": "Fo+", "VFEL": "Fo+", "VFLE": "Fo+", "VLEF": "Fo+", "VLFE": "Fo-" };
+var aspectLs = { "": "", "EFLV": "Ls-", "EFVL": "Ls-", "ELFV": "Ls+", "ELVF": "Ls+", "EVFL": "Ls-", "EVLF": "Ls-", "FELV": "Ls-", "FEVL": "Ls-", "FLEV": "Ls+", "FLVE": "Ls+", "FVEL": "Ls-", "FVLE": "Ls-", "LEFV": "Ls+", "LEVF": "Ls+", "LFEV": "Ls+", "LFVE": "Ls+", "LVEF": "Ls+", "LVFE": "Ls+", "VEFL": "Ls-", "VELF": "Ls-", "VFEL": "Ls-", "VFLE": "Ls-", "VLEF": "Ls+", "VLFE": "Ls+" };
+var aspectLo = { "": "", "EFLV": "Lo-", "EFVL": "Lo+", "ELFV": "Lo+", "ELVF": "Lo+", "EVFL": "Lo+", "EVLF": "Lo-", "FELV": "Lo-", "FEVL": "Lo+", "FLEV": "Lo+", "FLVE": "Lo+", "FVEL": "Lo+", "FVLE": "Lo-", "LEFV": "Lo-", "LEVF": "Lo-", "LFEV": "Lo-", "LFVE": "Lo-", "LVEF": "Lo-", "LVFE": "Lo-", "VEFL": "Lo+", "VELF": "Lo-", "VFEL": "Lo+", "VFLE": "Lo-", "VLEF": "Lo+", "VLFE": "Lo+" };
+var aspectVs = { "": "", "EFLV": "Vs-", "EFVL": "Vs-", "ELFV": "Vs-", "ELVF": "Vs-", "EVFL": "Vs+", "EVLF": "Vs+", "FELV": "Vs-", "FEVL": "Vs-", "FLEV": "Vs-", "FLVE": "Vs-", "FVEL": "Vs+", "FVLE": "Vs+", "LEFV": "Vs-", "LEVF": "Vs-", "LFEV": "Vs-", "LFVE": "Vs-", "LVEF": "Vs+", "LVFE": "Vs+", "VEFL": "Vs+", "VELF": "Vs+", "VFEL": "Vs+", "VFLE": "Vs+", "VLEF": "Vs+", "VLFE": "Vs+" };
+var aspectVo = { "": "", "EFLV": "Vo+", "EFVL": "Vo-", "ELFV": "Vo+", "ELVF": "Vo-", "EVFL": "Vo+", "EVLF": "Vo+", "FELV": "Vo+", "FEVL": "Vo-", "FLEV": "Vo+", "FLVE": "Vo-", "FVEL": "Vo+", "FVLE": "Vo+", "LEFV": "Vo+", "LEVF": "Vo-", "LFEV": "Vo+", "LFVE": "Vo-", "LVEF": "Vo+", "LVFE": "Vo+", "VEFL": "Vo-", "VELF": "Vo-", "VFEL": "Vo-", "VFLE": "Vo-", "VLEF": "Vo-", "VLFE": "Vo-" };
+var aspect1 = { "": "", "EFLV": "E1", "EFVL": "E1", "ELFV": "E1", "ELVF": "E1", "EVFL": "E1", "EVLF": "E1", "FELV": "F1", "FEVL": "F1", "FLEV": "F1", "FLVE": "F1", "FVEL": "F1", "FVLE": "F1", "LEFV": "L1", "LEVF": "L1", "LFEV": "L1", "LFVE": "L1", "LVEF": "L1", "LVFE": "L1", "VEFL": "V1", "VELF": "V1", "VFEL": "V1", "VFLE": "V1", "VLEF": "V1", "VLFE": "V1" };
+var aspect2 = { "": "", "EFLV": "F2", "EFVL": "F2", "ELFV": "L2", "ELVF": "L2", "EVFL": "V2", "EVLF": "V2", "FELV": "E2", "FEVL": "E2", "FLEV": "L2", "FLVE": "L2", "FVEL": "V2", "FVLE": "V2", "LEFV": "E2", "LEVF": "E2", "LFEV": "F2", "LFVE": "F2", "LVEF": "V2", "LVFE": "V2", "VEFL": "E2", "VELF": "E2", "VFEL": "F2", "VFLE": "F2", "VLEF": "L2", "VLFE": "L2" };
+var aspect3 = { "": "", "EFLV": "L3", "EFVL": "V3", "ELFV": "F3", "ELVF": "V3", "EVFL": "F3", "EVLF": "L3", "FELV": "L3", "FEVL": "V3", "FLEV": "E3", "FLVE": "V3", "FVEL": "E3", "FVLE": "L3", "LEFV": "F3", "LEVF": "V3", "LFEV": "E3", "LFVE": "V3", "LVEF": "E3", "LVFE": "F3", "VEFL": "F3", "VELF": "L3", "VFEL": "E3", "VFLE": "L3", "VLEF": "E3", "VLFE": "F3" };
+var aspect4 = { "": "", "EFLV": "V4", "EFVL": "L4", "ELFV": "V4", "ELVF": "F4", "EVFL": "L4", "EVLF": "F4", "FELV": "V4", "FEVL": "L4", "FLEV": "V4", "FLVE": "E4", "FVEL": "L4", "FVLE": "E4", "LEFV": "V4", "LEVF": "F4", "LFEV": "V4", "LFVE": "E4", "LVEF": "F4", "LVFE": "E4", "VEFL": "L4", "VELF": "F4", "VFEL": "L4", "VFLE": "E4", "VLEF": "F4", "VLFE": "E4" };
+var judg_func = { "": "", "ENFJ": "Ni", "ENFP": "Ne", "ENTJ": "Ni", "ENTP": "Ne", "ESFJ": "Si", "ESFP": "Se", "ESTJ": "Si", "ESTP": "Se", "INFJ": "Ni", "INFP": "Ne", "INTJ": "Ni", "INTP": "Ne", "ISFJ": "Si", "ISFP": "Se", "ISTJ": "Si", "ISTP": "Se" };
+var prec_func = { "": "", "ENFJ": "Fe", "ENFP": "Fi", "ENTJ": "Te", "ENTP": "Ti", "ESFJ": "Fe", "ESFP": "Fi", "ESTJ": "Te", "ESTP": "Ti", "INFJ": "Fe", "INFP": "Fi", "INTJ": "Te", "INTP": "Ti", "ISFJ": "Fe", "ISFP": "Fi", "ISTJ": "Te", "ISTP": "Ti" };
+var dom_elem = { "": "", "EIE": "Fe", "EII": "Fi", "ESE": "Fe", "ESI": "Fi", "IEE": "Ne", "IEI": "Ni", "ILE": "Ne", "ILI": "Ni", "LIE": "Te", "LII": "Ti", "LSE": "Te", "LSI": "Ti", "SEE": "Se", "SEI": "Si", "SLE": "Si", "SLI": "Si" };
+var aux_elem = { "": "", "EIE": "Ni", "EII": "Fe", "ESE": "Si", "ESI": "Se", "IEE": "Fi", "IEI": "Fe", "ILE": "Ti", "ILI": "Te", "LIE": "Ni", "LII": "Ne", "LSE": "Si", "LSI": "Se", "SEE": "Fi", "SEI": "Fe", "SLE": "Ti", "SLI": "Te" };
+
 function get_scores() {
-    for (var i = 0; i<user_scores.length; i++) {
+    for (var i = 0; i < user_scores.length; i++) {
         var s = query.substring(i * 2, i * 2 + 2);
         if (s == "--") {
             s = 100;
@@ -2609,7 +2647,7 @@ function calculate(scores_db) {
             var sumXY = 0;
             var sumX2 = 0;
             var sumY2 = 0;
-            for (var i = 0; i < length; i++) {
+            for (var i = 0; i < user_scores.length; i++) {
                 var x = user_scores[i];
                 var y = z[i]
                 if (x != -1) {
@@ -2628,80 +2666,447 @@ function calculate(scores_db) {
     }
 }
 
-function average(types_db, types_scores, index, method) {
-    var sumcount = [];
-    var results = []
-    var length = display_array[index][1]
-    for (var i = 0; i < length; i++) {
-        sumcount[i] = [0, 0];
+function cleanse(dict, value = 0) {
+    var d = {};
+    for (var v in dict) {
+        d[v] = value;
     }
+    return d;
+}
+
+function cleanse2(dict) {
+    var d = {};
+    for (var v in dict) {
+        d[v] = [0,0];
+    }
+    return d;
+}
+
+function avg(types_db, types_scores2, index, method) {
+    var types_scores = cleanse2(types_scores2);
     for (var universe in types_db) {
         for (var character in types_db[universe]) {
-            for (var i = 0; i < length; i++) {
-                if (types_db[universe][character][index] == types_scores[i][0]) {
-                    sumcount[i][0] += character_scores[universe][character][method];
-                    sumcount[i][1]++;
+            var da_type = types_db[universe][character][index];
+            document.getElementById("debug").innerHTML = universe + " " + character + " " + da_type;
+            if (da_type != "") {
+                types_scores[da_type][0] += character_scores[universe][character][method];
+                types_scores[da_type][1]++;
+            }
+        }
+    } //at this point, types_scores should contain the sum and the count of each type
+    for (var type in types_scores) {
+        if (types_scores[type][1] == 0) {
+            types_scores[type][1] = 1;
+        }
+        types_scores[type] = types_scores[type][0] / types_scores[type][1];
+    } //now it should contain the avg score for each type
+    return types_scores;
+}
+
+function max(types_db, types_scores2, index, method) {
+    var types_scores = cleanse(types_scores2);
+    for (var universe in types_db) {
+        for (var character in types_db[universe]) {
+            var da_type = types_db[universe][character][index];
+            if (da_type != "") {
+                var val = character_scores[universe][character][method];
+                if (types_scores[da_type] < val) {
+                    types_scores[da_type] = val;
                 }
             }
         }
-    }
-    for (var i = 0; i < length; i++) {
-        if (sumcount[i][1] != 0) {
-            sumcount[i][1] = sumcount[i][0] / sumcount[i][1];
+    } //at this point, types_scores should contain the maximum of each type
+    return types_scores;
+}
+
+function min(types_db, types_scores2, index, method) {
+    var types_scores = cleanse(types_scores2, Infinity);
+    for (var universe in types_db) {
+        for (var character in types_db[universe]) {
+            var da_type = types_db[universe][character][index];
+            if (da_type != "") {
+                var val = character_scores[universe][character][method];
+                if (types_scores[da_type] > val) {
+                    types_scores[da_type] = val;
+                }
+            }
         }
-        sumcount[i][0] = types_scores[i][0];
+    } //at this point, types_scores should contain the minimum of each type, except for those who don't appear
+    for (var v in types_scores) {
+        if (types_scores[v] == Infinity) {
+            types_scores[v] = 0;
+        }
     }
-    sumcount.sort(function (first, second) {
-        return second[1] - first[1];
+    return types_scores;
+}
+
+function avg2(types_db, types_scores2, index, method, dict) {
+    var types_scores = cleanse2(types_scores2);
+    for (var universe in types_db) {
+        for (var character in types_db[universe]) {
+            var da_type = dict[types_db[universe][character][index]];
+            //document.getElementById("debug").innerHTML = universe + " " + character + " " + da_type;
+            if (da_type != "" || index == 9) {
+                types_scores[da_type][0] += character_scores[universe][character][method];
+                types_scores[da_type][1]++;
+            }
+        }
+    } //at this point, types_scores should contain the sum and the count of each type
+    for (var type in types_scores) {
+        if (types_scores[type][1] == 0) {
+            types_scores[type][1] = 1;
+        }
+        types_scores[type] = types_scores[type][0] / types_scores[type][1];
+    } //now it should contain the avg score for each type
+    return types_scores;
+}
+
+function max2(types_db, types_scores2, index, method, dict) {
+    var types_scores = cleanse(types_scores2);
+    for (var universe in types_db) {
+        for (var character in types_db[universe]) {
+            var da_type = dict[types_db[universe][character][index]];
+            if (da_type != "" || index == 9) {
+                var val = character_scores[universe][character][method];
+                if (types_scores[da_type] < val) {
+                    types_scores[da_type] = val;
+                }
+            }
+        }
+    } //at this point, types_scores should contain the maximum of each type
+    return types_scores;
+}
+
+function min2(types_db, types_scores2, index, method, dict) {
+    var types_scores = cleanse(types_scores2, Infinity);
+    for (var universe in types_db) {
+        for (var character in types_db[universe]) {
+            var da_type = dict[types_db[universe][character][index]];
+            if (da_type != "" || index == 9) {
+                var val = character_scores[universe][character][method];
+                if (types_scores[da_type] > val) {
+                    types_scores[da_type] = val;
+                }
+            }
+        }
+    } //at this point, types_scores should contain the minimum of each type, except for those who don't appear
+    for (var v in types_scores) {
+        if (types_scores[v] == Infinity) {
+            types_scores[v] = 0;
+        }
+    }
+    return types_scores;
+}
+
+function add_scores(types_scores, basic_scores) {
+    var da_scores = []
+    var i = 0;
+    for (var type in basic_scores) {
+        da_scores[i] = basic_scores[type];
+        i++;
+    }
+    da_scores.sort(function (a, b) {
+        return b - a;
     });
-    var previous;
-    for (var j = 0; j < length; j++) {
-        for (var i = 0; i < length; i++) {
-            if (types_scores[i][0] == sumcount[j][0]) {
-                if (j == 0 || sumcount[j][1] != sumcount[j - 1][1]) {
-                    types_scores[i][1] += length - j;
-                    previous = length - j;
-                }
-                else {
-                    types_scores[i][1] += previous;
-                }
+    var length = da_scores.length;
+    for (var type in basic_scores) {
+        for (i = 0; i < length; i++) {
+            if (basic_scores[type] == da_scores[i]) {
+                types_scores[type] += length - i - 1;
+                break;
             }
         }
     }
     return types_scores;
 }
 
+function score(types_db, types_scores, index, method, method2, dict = {}) {
+    switch (method2) {
+        case 0:
+            var basic_scores = avg(types_db, types_scores, index, method);
+            break;
+        case 1:
+            var basic_scores = max(types_db, types_scores, index, method);
+            break;
+        case 2:
+            var basic_scores = min(types_db, types_scores, index, method);
+            break;
+        case 3:
+            var basic_scores = avg2(types_db, types_scores, index, method, dict);
+            break;
+        case 4:
+            var basic_scores = max2(types_db, types_scores, index, method, dict);
+            break;
+        case 5:
+            var basic_scores = min2(types_db, types_scores, index, method, dict);
+            break;
+    }
+    return basic_scores;
+}
+
+function do_the_thing(types_db, types_scores, index) {
+    switch (index) {
+        case 0:
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    types_scores = add_scores(types_scores, score(types_db, types_scores, index, i, j));
+                }
+            }
+            for (var i = 0; i < 2; i++) {
+                for (var j = 3; j < 6; j++) {
+                    var basic_scores1 = score(types_db, function_scores, index, i, j, dom_func);
+                    var basic_scores2 = score(types_db, function_scores, index, i, j, aux_func);
+                    var tt = cleanse(MBTI_scores);
+                    for (var v in tt) {
+                        tt[v] = 2 * basic_scores1[dom_func[v]] + basic_scores1[aux_func[v]];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                    tt = cleanse(MBTI_scores);
+                    for (var v in tt) {
+                        tt[v] = basic_scores1[dom_func[v]] + basic_scores2[aux_func[v]];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                    tt = cleanse(MBTI_scores);
+                    for (var v in tt) {
+                        tt[v] = 5 * basic_scores1[dom_func[v]] + 3 * basic_scores1[aux_func[v]] + basic_scores1[tert_func[v]] - basic_scores1[inf_func[v]];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                    basic_scores1 = score(types_db, function_scores, index, i, j, judg_func);
+                    basic_scores2 = score(types_db, function_scores, index, i, j, prec_func);
+                    tt = cleanse(MBTI_scores);
+                    for (var v in tt) {
+                        if ((v[0] == "I" && v[3] == "J") || (v[0] == "E" && v[3] == "P")) {
+                            tt[v] = 2 * basic_scores1[judg_func[v]] + basic_scores2[prec_func[v]];
+                        }
+                        else {
+                            tt[v] = basic_scores1[judg_func[v]] + 2 * basic_scores2[prec_func[v]];
+                        }
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                }
+            }
+            //improve
+            break;
+        case 1:
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    types_scores = add_scores(types_scores, score(types_db, types_scores, index, i, j));
+                }
+            }
+            break;
+        case 2:
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    types_scores = add_scores(types_scores, score(types_db, types_scores, index, i, j));
+                }
+            }
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    var basic_scores = score(types_db, ennea_scores, 1, i, j);
+                    var tt = cleanse(enneawing_scores);
+                    for (var v in tt) {
+                        tt[v] = 3 * basic_scores[v[0]] + basic_scores[v[2]];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                }
+            }
+            break;
+        case 3:
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    types_scores = add_scores(types_scores, score(types_db, types_scores, index, i, j));
+                }
+            }
+            for (var i = 0; i < 2; i++) {
+                for (var j = 3; j < 6; j++) {
+                    var basic_scores = score(types_db, instinct_scores, index, i, j, main_variant);
+                    var tt = cleanse(variant_scores);
+                    for (var v in tt) {
+                        tt[v] = 2 * basic_scores[v.substring(0, 2)] + basic_scores[v.substring(3)];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                }
+            }
+            break;
+        case 4:
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    var basic_scores = score(types_db, ennea_scores, 1, i, j);
+                    var tt = cleanse(tritype_scores);
+                    for (var v in tt) {
+                        tt[v] = 3 * basic_scores[v[0]] + 2 * basic_scores[v[1]] + basic_scores[v[2]];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                }
+            }
+            break;
+        case 5:
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    types_scores = add_scores(types_scores, score(types_db, types_scores, index, i, j));
+                }
+            }
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    var basic_scores = score(types_db, ennea_scores, 1, i, j);
+                    var tt = cleanse(family_scores);
+                    for (var v in tt) {
+                        tt[v] = basic_scores[v[0]] + basic_scores[v[2]] + basic_scores[v[4]];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                }
+            }
+            break;
+        case 6:
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    types_scores = add_scores(types_scores, score(types_db, types_scores, index, i, j));
+                }
+                for (var i = 0; i < 2; i++) {
+                    for (var j = 3; j < 6; j++) {
+                        var basic_scores1 = score(types_db, function_scores, index, i, j, dom_elem);
+                        var basic_scores2 = score(types_db, function_scores, index, i, j, aux_elem);
+                        var tt = cleanse(socionics_scores);
+                        for (var v in tt) {
+                            tt[v] = basic_scores1[dom_elem[v]] + basic_scores2[aux_elem[v]];
+                        }
+                        types_scores = add_scores(types_scores, tt);
+                    }
+                }
+            }
+            //add
+            break;
+        case 7:
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    types_scores = add_scores(types_scores, score(types_db, types_scores, index, i, j));
+                }
+            }
+            for (var i = 0; i < 2; i++) {
+                for (var j = 3; j < 6; j++) {
+                    var basic_scores1 = score(types_db, trait_scores, index, i, j, trait1);
+                    var basic_scores2 = score(types_db, trait_scores, index, i, j, trait2);
+                    var basic_scores3 = score(types_db, trait_scores, index, i, j, trait3);
+                    var basic_scores4 = score(types_db, trait_scores, index, i, j, trait4);
+                    var basic_scores5 = score(types_db, trait_scores, index, i, j, trait5);
+                    var tt = cleanse(big5_scores);
+                    for (var v in tt) {
+                        tt[v] = basic_scores1[v[0]] + basic_scores2[v[1]] + basic_scores3[v[2]] + basic_scores4[v[3]] + basic_scores5[v[4]];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                }
+            }
+            //improve
+            break;
+        case 8:
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    types_scores = add_scores(types_scores, score(types_db, types_scores, index, i, j));
+                }
+            }
+            for (var i = 0; i < 2; i++) {
+                for (var j = 3; j < 6; j++) {
+                    var basic_scores1 = score(types_db, attitude_scores, index, i, j, aspectEo);
+                    var basic_scores2 = score(types_db, attitude_scores, index, i, j, aspectEs);
+                    var basic_scores3 = score(types_db, attitude_scores, index, i, j, aspectFo);
+                    var basic_scores4 = score(types_db, attitude_scores, index, i, j, aspectFs);
+                    var basic_scores5 = score(types_db, attitude_scores, index, i, j, aspectLo);
+                    var basic_scores6 = score(types_db, attitude_scores, index, i, j, aspectLs);
+                    var basic_scores7 = score(types_db, attitude_scores, index, i, j, aspectVo);
+                    var basic_scores8 = score(types_db, attitude_scores, index, i, j, aspectVs);
+                    var basic_scores = {};
+                    for (var v in attitude_scores) {
+                        basic_scores[v] = 0;
+                        basic_scores[v] += basic_scores1[v];
+                        basic_scores[v] += basic_scores2[v];
+                        basic_scores[v] += basic_scores3[v];
+                        basic_scores[v] += basic_scores4[v];
+                        basic_scores[v] += basic_scores5[v];
+                        basic_scores[v] += basic_scores6[v];
+                        basic_scores[v] += basic_scores7[v];
+                        basic_scores[v] += basic_scores8[v];
+                    }
+                    var tt = cleanse(ap_scores);
+                    for (var v in tt) {
+                        tt[v] = basic_scores[aspectEo[v]] + basic_scores[aspectEs[v]] + basic_scores[aspectFo[v]] + basic_scores[aspectFs[v]] + basic_scores[aspectLo[v]] + basic_scores[aspectLs[v]] + basic_scores[aspectVo[v]] + basic_scores[aspectVs[v]];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                }
+            }
+            for (var i = 0; i < 2; i++) {
+                for (var j = 3; j < 6; j++) {
+                    var basic_scores1 = score(types_db, aspect_scores, index, i, j, aspect1);
+                    var basic_scores2 = score(types_db, aspect_scores, index, i, j, aspect2);
+                    var basic_scores3 = score(types_db, aspect_scores, index, i, j, aspect3);
+                    var basic_scores4 = score(types_db, aspect_scores, index, i, j, aspect4);
+                    var basic_scores = {};
+                    for (var v in aspect_scores) {
+                        basic_scores[v] = 0;
+                        basic_scores[v] += basic_scores1[v];
+                        basic_scores[v] += basic_scores2[v];
+                        basic_scores[v] += basic_scores3[v];
+                        basic_scores[v] += basic_scores4[v];
+                    }
+                    var tt = cleanse(ap_scores);
+                    for (var v in tt) {
+                        tt[v] = basic_scores[aspect1[v]] + basic_scores[aspect2[v]] + basic_scores[aspect3[v]] + basic_scores[aspect4[v]];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                }
+            }
+            //improve
+            break;
+        case 9:
+            for (var i = 0; i < 2; i++) {
+                for (var j = 0; j < 3; j++) {
+                    types_scores = add_scores(types_scores, score(types_db, types_scores, index, i, j));
+                }
+            }
+            for (var i = 0; i < 2; i++) {
+                for (var j = 3; j < 6; j++) {
+                    var basic_scores = score(types_db, temperament_scores, index, i, j, main_temperament);
+                    var tt = cleanse(ft_scores);
+                    for (var v in tt) {
+                        tt[v] = 2 * basic_scores[main_temperament[v]] + basic_scores[secondary_temperament[v]];
+                    }
+                    types_scores = add_scores(types_scores, tt);
+                }
+            }
+            break;
+    }
+    return types_scores;
+}
+
 function display(types_scores, index) {
+    var da_scores = []
+    var i = 0;
     var s = "";
-    var sorted = types_scores.sort(function (first, second) {
-        return second[1] - first[1];
+    for (var type in types_scores) {
+        da_scores[i] = [type, types_scores[type]];
+        i++;
+    }
+    da_scores.sort(function (a, b) {
+        return b[1] - a[1];
     });
-    for (var i = 0; i < display_array[index][1]; i++) {
-        sorted[i][1] = sorted[i][1] * 100 / display_array[index][2];
-        s += sorted[i][0] + " " + Number((sorted[i][1]).toFixed(2)) + "%<br/>";
+    var length = da_scores.length;
+    for (i = 0; i < length; i++) {
+        var thingamajig = da_scores[i][1] * 100 / (display_array[index][2] - display_array[index][2] / display_array[index][1]);
+        s += da_scores[i][0] + " " + Number(thingamajig.toFixed(2)) + "%<br/>";
     }
     document.getElementById(display_array[index][0]).innerHTML = s;
 }
 
 function final_scoring(types_db) {
-    MBTI_scores = average(types_db, MBTI_scores, 0, 0);
-    MBTI_scores = average(types_db, MBTI_scores, 0, 1);
-    enneatype_scores = average(types_db, enneatype_scores, 1, 0);
-    enneatype_scores = average(types_db, enneatype_scores, 1, 1);
-    enneawing_scores = average(types_db, enneawing_scores, 2, 0);
-    enneawing_scores = average(types_db, enneawing_scores, 2, 1);
-    variant_scores = average(types_db, variant_scores, 3, 0);
-    variant_scores = average(types_db, variant_scores, 3, 1);
-    tritype_scores = average(types_db, tritype_scores, 4, 0);
-    tritype_scores = average(types_db, tritype_scores, 4, 1);
-    socionics_scores = average(types_db, socionics_scores, 5, 0);
-    socionics_scores = average(types_db, socionics_scores, 5, 1);
-    big5_scores = average(types_db, big5_scores, 6, 0);
-    big5_scores = average(types_db, big5_scores, 6, 1);
-    ap_scores = average(types_db, ap_scores, 7, 0);
-    ap_scores = average(types_db, ap_scores, 7, 1);
-    ft_scores = average(types_db, ft_scores, 8, 0);
-    ft_scores = average(types_db, ft_scores, 8, 1);
+    MBTI_scores = do_the_thing(types_db, MBTI_scores, 0);
+    enneatype_scores = do_the_thing(types_db, enneatype_scores, 1);
+    enneawing_scores = do_the_thing(types_db, enneawing_scores, 2);
+    variant_scores = do_the_thing(types_db, variant_scores, 3);
+    tritype_scores = do_the_thing(types_db, tritype_scores, 4);
+    family_scores = do_the_thing(types_db, family_scores, 5);
+    socionics_scores = do_the_thing(types_db, socionics_scores, 6);
+    big5_scores = do_the_thing(types_db, big5_scores, 7);
+    ap_scores = do_the_thing(types_db, ap_scores, 8);
+    ft_scores = do_the_thing(types_db, ft_scores, 9);
 }
 
 function display_all() {
@@ -2710,8 +3115,9 @@ function display_all() {
     display(enneawing_scores, 2);
     display(variant_scores, 3);
     display(tritype_scores, 4);
-    display(socionics_scores, 5);
-    display(big5_scores, 6);
-    display(ap_scores, 7);
-    display(ft_scores, 8);
+    display(family_scores, 5);
+    display(socionics_scores, 6);
+    display(big5_scores, 7);
+    display(ap_scores, 8);
+    display(ft_scores, 9);
 }

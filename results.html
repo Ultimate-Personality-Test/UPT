@@ -25,9 +25,14 @@
                 }
 
         .full {
-            display: flex;
+            display: inline-block;
             flex-wrap: nowrap;
             justify-content: space-between;
+        }
+
+        .system {
+            float: left;
+            margin-right: 15px;
         }
     </style>
 </head>
@@ -39,43 +44,43 @@
     </div>
     <h3 id="debug" style="color: red"></h3>
     <div class="full">
-        <div>
+        <div class="system">
             <p><strong>MBTI</strong></p>
             <p id="MBTI"></p>
         </div>
-        <div>
+        <div class="system">
             <p><strong>Enneagram Type</strong></p>
             <p id="enneatype"></p>
         </div>
-        <div>
+        <div class="system">
             <p><strong>Enneagram+wing</strong></p>
             <p id="enneawing"></p>
         </div>
-        <div>
+        <div class="system">
             <p><strong>Instinctual Variant</strong></p>
             <p id="variant"></p>
         </div>
-        <div>
+        <div class="system">
             <p><strong>Tritype</strong></p>
             <p id="tritype"></p>
         </div>
-        <div>
+        <div class="system">
             <p><strong>Tritype Family</strong></p>
             <p id="family"></p>
         </div>
-        <div>
+        <div class="system">
             <p><strong>Socionics</strong></p>
             <p id="socionics"></p>
         </div>
-        <div>
+        <div class="system">
             <p><strong>Big Five</strong></p>
             <p id="big5"></p>
         </div>
-        <div>
+        <div class="system">
             <p><strong>Attitudinal Psyche</strong></p>
             <p id="ap"></p>
         </div>
-        <div>
+        <div class="system">
             <p><strong>Four Temperaments</strong></p>
             <p id="4t"></p>
         </div>
