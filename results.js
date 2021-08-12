@@ -1,6 +1,6 @@
 var query = window.location.search.substring(3);
 var user_scores = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
-var display_array = [["MBTI", 16, 480], ["enneatype", 9, 54], ["enneawing", 18, 216], ["variant", 6, 72], ["tritype", 162, 972], ["family", 27, 324], ["socionics", 16, 144], ["big5", 32, 384], ["ap", 24, 432], ["4t", 16, 192]];
+var display_array = [["MBTI", 16, 480], ["enneatype", 9, 54], ["enneawing", 18, 216], ["variant", 6, 72], ["tritype", 162, 972], ["family", 27, 324], ["socionics", 16, 192], ["big5", 32, 384], ["ap", 24, 432], ["4t", 16, 192]];
 var character_scores =
     {
         "GOT": {
@@ -2962,16 +2962,16 @@ function do_the_thing(types_db, types_scores, index) {
                 for (var j = 0; j < 3; j++) {
                     types_scores = add_scores(types_scores, score(types_db, types_scores, index, i, j));
                 }
-                for (var i = 0; i < 2; i++) {
-                    for (var j = 3; j < 6; j++) {
-                        var basic_scores1 = score(types_db, function_scores, index, i, j, dom_elem);
-                        var basic_scores2 = score(types_db, function_scores, index, i, j, aux_elem);
-                        var tt = cleanse(socionics_scores);
-                        for (var v in tt) {
-                            tt[v] = basic_scores1[dom_elem[v]] + basic_scores2[aux_elem[v]];
-                        }
-                        types_scores = add_scores(types_scores, tt);
+            }
+            for (var i = 0; i < 2; i++) {
+                for (var j = 3; j < 6; j++) {
+                    var basic_scores1 = score(types_db, function_scores, index, i, j, dom_elem);
+                    var basic_scores2 = score(types_db, function_scores, index, i, j, aux_elem);
+                    var tt = cleanse(socionics_scores);
+                    for (var v in tt) {
+                        tt[v] = basic_scores1[dom_elem[v]] + basic_scores2[aux_elem[v]];
                     }
+                    types_scores = add_scores(types_scores, tt);
                 }
             }
             //add
